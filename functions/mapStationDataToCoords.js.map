@@ -1,0 +1,1 @@
+{"version":3,"file":"mapStationDataToCoords.js","sourceRoot":"","sources":["mapStationDataToCoords.ts"],"names":[],"mappings":";;AAGa,QAAA,sBAAsB,GAAG,UAAC,eAAsC;IACzE,MAAM,CAAC,eAAe,CAAC,GAAG,CAAC,UAAA,CAAC;QACxB,MAAM,CAAC,EAAE,GAAG,EAAE,CAAC,CAAC,OAAO,CAAC,GAAG,EAAE,GAAG,EAAE,CAAC,CAAC,OAAO,CAAC,GAAG,EAAE,CAAA;IACrD,CAAC,CAAC,CAAC;AACP,CAAC,CAAC"}

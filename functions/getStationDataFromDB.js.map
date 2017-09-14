@@ -1,0 +1,1 @@
+{"version":3,"file":"getStationDataFromDB.js","sourceRoot":"","sources":["getStationDataFromDB.ts"],"names":[],"mappings":";;AACA,+BAAmC;AAEtB,QAAA,oBAAoB,GAAG;IAChC,MAAM,CAAC,YAAO,CAAC,OAAO,CAAC,EAAE,UAAU,EAAE,CAAC,IAAI,EAAE,KAAK,EAAE,KAAK,EAAE,UAAU,EAAE,YAAY,CAAC,EAAE,CAAC,CAAA;AAC1F,CAAC,CAAC"}
