@@ -2,30 +2,19 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var processDirection_1 = require("./processDirection");
 var timeTarget_1 = require("./timeTarget");
-var getStationDataFromDB_1 = require("../functions/getStationDataFromDB");
 var ProcessManager = (function () {
     function ProcessManager(tripQueryRequest) {
+        this.tripQueryRequest = tripQueryRequest;
         this.direction = tripQueryRequest.timeTarget === timeTarget_1.TimeTarget.ARRIVE_BY
             ? processDirection_1.processDirection.BACKWARDS
             : processDirection_1.processDirection.FORWARDS;
+        if (this.direction === processDirection_1.processDirection.FORWARDS) {
+            this.departureTime = tripQueryRequest.time;
+        }
+        else if (this.direction === processDirection_1.processDirection.BACKWARDS) {
+            this.arrivalTime = tripQueryRequest.time;
+        }
     }
-    ProcessManager.prototype.getStationData = function () {
-        this.stationDataPromise = getStationDataFromDB_1.getStationDataFromDB();
-    };
-    ProcessManager.prototype.getStation1 = function () {
-        this.stationDataPromise.then();
-    };
-    ProcessManager.prototype.getWalkingDirections1 = function () {
-    };
-    ProcessManager.prototype.getStation2 = function () {
-    };
-    ProcessManager.prototype.getWalkingDirections2 = function () {
-    };
-    ProcessManager.prototype.getBikeDirections = function () {
-    };
-    ProcessManager.prototype.sendResponse = function () {
-        // Promise.all(promises)
-    };
     Object.defineProperty(ProcessManager.prototype, "processFirst", {
         get: function () {
             if (this.direction === processDirection_1.processDirection.FORWARDS) {
@@ -63,4 +52,35 @@ var ProcessManager = (function () {
     return ProcessManager;
 }());
 exports.ProcessManager = ProcessManager;
+//
+// export interface TripQueryResponse {
+//     origin: Coords;
+//     departureTime: Date;
+//
+//     walking1Points: Coords[];
+//     walking1Duration: number;
+//     walking1DistanceText: string;
+//
+//     station1: Coords;
+//     reservation1StartTime: Date;
+//     reservation1EndTime: Date;
+//     reservation1Price: number
+//
+//     bicyclingPoints: Coords[];
+//     bicyclingDuration: number;
+//     bicyclingDistanceText: string;
+//     bicyclingPrice: number;
+//
+//     station2: Coords;
+//     reservation2StartTime: Date;
+//     reservation2EndTime: Date;
+//     reservation2Price: Date;
+//
+//     walking2Points: Coords[];
+//     walking2Duration: number;
+//     walking2DistanceText: string;
+//
+//     destination: Coords;
+//     arrivalTime: Date;
+// }
 //# sourceMappingURL=processManager.js.map

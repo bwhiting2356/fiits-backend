@@ -48,8 +48,10 @@ var buildDistanceMatrixRequest_1 = require("./buildDistanceMatrixRequest");
 var findSecondReservation_1 = require("./findSecondReservation");
 var addSeconds_1 = require("./addSeconds");
 var fetchDirections_1 = require("./fetchDirections");
+var getPointsFromDirections_1 = require("./getPointsFromDirections");
+var addTenMinutes_1 = require("./addTenMinutes");
 exports.tripQueryRequest = function (tripQueryRequest) { return __awaiter(_this, void 0, void 0, function () {
-    var processManager, stationDataManager, stationData, tripQueryResponse_1, walkingRequest1, walkingRequest1Promise, walkingRequest2, walkingRequest2Promise, walkingDirections1, reservation1Success, all;
+    var processManager, stationDataManager, stationData, walkingRequest1, walkingRequest1Promise, walkingRequest2, walkingRequest2Promise, reservation1Success, all;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
@@ -60,18 +62,6 @@ exports.tripQueryRequest = function (tripQueryRequest) { return __awaiter(_this,
                 stationData = _a.sent();
                 stationDataManager.initializeStations(stationData);
                 if (!(processManager.direction === processDirection_1.processDirection.FORWARDS)) return [3 /*break*/, 3];
-                tripQueryResponse_1 = {
-                    tripQueryRequest: tripQueryRequest,
-                    reservation1: undefined,
-                    station1: undefined,
-                    reservation2: undefined,
-                    station2: undefined,
-                    leave: tripQueryRequest.time,
-                    arrive: undefined,
-                    walkingDirections1: undefined,
-                    bicyclingDirections: undefined,
-                    walkingDirections2: undefined
-                };
                 walkingRequest1 = buildDistanceMatrixRequest_1.buildDistanceMatrixRequest(tripQueryRequest.origin, stationDataManager, travelMode_1.TravelMode.walking);
                 walkingRequest1Promise = fetchDistanceMatrix_1.fetchDistanceMatrix(walkingRequest1)
                     .then(function (distanceMatrixResults) {
@@ -82,21 +72,24 @@ exports.tripQueryRequest = function (tripQueryRequest) { return __awaiter(_this,
                     .then(function (distanceMatrixResults) {
                     stationDataManager.addWalking2Distances(distanceMatrixResults);
                 });
-                walkingDirections1 = void 0;
                 reservation1Success = walkingRequest1Promise
-                    .then(function (h) {
+                    .then(function (reservationResponse) {
+                    processManager.walking1Duration = reservationResponse.station.walking1Distance.duration;
+                    processManager.walking1DistanceText = reservationResponse.station.walking1Distance.distanceText;
                     return findFirstReservation_1.findFirstReservation(stationDataManager.stationsWalking1Distances, tripQueryRequest);
                 })
                     .then(function (reservation1) {
                     fetchDirections_1.fetchDirections(tripQueryRequest.origin, reservation1.station.station, travelMode_1.TravelMode.walking)
                         .then(function (walkingDirectionsReponse) {
-                        tripQueryResponse_1.walkingDirections1 = walkingDirectionsReponse;
+                        processManager.walking1Points = getPointsFromDirections_1.getPointsFromDirections(walkingDirectionsReponse);
                     });
                     return reservation1;
                 });
                 all = Promise.all([walkingRequest2Promise, reservation1Success]).then(function (results) {
-                    tripQueryResponse_1.reservation1 = results[1].reservation;
-                    tripQueryResponse_1.station1 = results[1].station;
+                    processManager.reservation1StartTime = results[1].reservation.time;
+                    processManager.reservation1EndTime = addTenMinutes_1.addTenMinutes(results[1].reservation.time);
+                    processManager.reservation1Price = 0.75; // TODO: compute the price somehow
+                    processManager.station1 = results[1].station.station;
                     var bicyclingRequest = buildDistanceMatrixRequest_1.buildDistanceMatrixRequest(results[1].station.station, stationDataManager, travelMode_1.TravelMode.bicycling);
                     return fetchDistanceMatrix_1.fetchDistanceMatrix(bicyclingRequest).then(function (distanceMatrixResults) {
                         stationDataManager.addBicyclingDistances(distanceMatrixResults);
@@ -105,20 +98,25 @@ exports.tripQueryRequest = function (tripQueryRequest) { return __awaiter(_this,
                         return findSecondReservation_1.findSecondReservation(stationDataManager.stationsWalking2Distances, results[1].reservation);
                     })
                         .then(function (reservation2) {
-                        tripQueryResponse_1.reservation2 = reservation2.reservation;
-                        tripQueryResponse_1.station2 = reservation2.station;
-                        tripQueryResponse_1.arrive = addSeconds_1.addSeconds(reservation2.reservation.time, reservation2.station.walking2Distance.duration);
+                        processManager.reservation2StartTime = reservation2.reservation.time;
+                        processManager.reservation2EndTime = addTenMinutes_1.addTenMinutes(reservation2.reservation.time);
+                        processManager.reservation2Price = 0.75; // TODO: compute the price somehow
+                        processManager.station2 = reservation2.station.station;
+                        // processManager.walking2Duration = reservation2.station.walking1Distance.duration;
+                        // processManager.walking2DistanceText = reservation2.station.walking1Distance.distanceText;
+                        processManager.arrivalTime = addSeconds_1.addSeconds(reservation2.reservation.time, reservation2.station.walking2Distance.duration);
                         return fetchDirections_1.fetchDirections(tripQueryRequest.destination, reservation2.station.station, travelMode_1.TravelMode.walking)
                             .then(function (walkingDirectionsReponse) {
-                            return tripQueryResponse_1.walkingDirections2 = walkingDirectionsReponse;
+                            processManager.walking2Points = getPointsFromDirections_1.getPointsFromDirections(walkingDirectionsReponse);
+                            return processManager;
                         });
                     })
                         .then(function () {
-                        return fetchDirections_1.fetchDirections(tripQueryResponse_1.station1.station, tripQueryResponse_1.station2.station, travelMode_1.TravelMode.bicycling)
+                        return fetchDirections_1.fetchDirections(processManager.station1, processManager.station2, travelMode_1.TravelMode.bicycling)
                             .then(function (directionsResponse) {
-                            tripQueryResponse_1.bicyclingDirections = directionsResponse;
-                            console.log(tripQueryResponse_1);
-                            return tripQueryResponse_1;
+                            processManager.bicyclingPoints = getPointsFromDirections_1.getPointsFromDirections(directionsResponse);
+                            console.log(processManager);
+                            return processManager;
                         });
                     }).then(function (tripQueryResponse) { return tripQueryResponse; });
                 });
@@ -144,5 +142,4 @@ var tqr = {
     time: new Date(),
     timeTarget: 'Leave now'
 };
-exports.tripQueryRequest(tqr).then(function (result) { return console.log("\n\n\n I'm finally at the end", result); });
 //# sourceMappingURL=tripQueryRequest.js.map
