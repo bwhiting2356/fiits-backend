@@ -6,8 +6,12 @@ import { fetchDirections } from "./fetchDirections";
 export const walking1DirectionsRequest = (
     processManager: ProcessManager
 ): Promise<ProcessManager> => {
+    const origin = processManager.tripQueryResponse.originCoords
+        ? processManager.tripQueryResponse.originCoords
+        : processManager.tripQueryResponse.originAddress;
+
     const walkingRequest1 = buildDirectionsRequest(
-        processManager.tripQueryResponse.originAddress,
+        origin,
         processManager.tripQueryResponse.station1Coords,
         TravelMode.walking);
     return fetchDirections(walkingRequest1)

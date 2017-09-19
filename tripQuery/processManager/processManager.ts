@@ -10,9 +10,9 @@ import { compareWalking2Distance } from "../stationData/compareWalking2Distance"
 import { compareBicyclingDistance } from "../stationData/compareBicyclingDistance";
 import { stationToCoords } from "../stationData/stationToCoords";
 import { Coords } from "../../shared/coords";
-import {addSeconds} from "../../shared/timeHelpers/addSeconds";
-import {subtractSeconds} from "../../shared/timeHelpers/subtractSeconds";
-import {getBicyclingPrice} from "./getBicyclingPrice";
+import { addSeconds } from "../../shared/timeHelpers/addSeconds";
+import { subtractSeconds } from "../../shared/timeHelpers/subtractSeconds";
+import { getBicyclingPrice } from "./getBicyclingPrice";
 
 export class ProcessManager {
     stationDistanceData: StationDistanceData[];
@@ -22,7 +22,9 @@ export class ProcessManager {
     constructor(private tripQueryRequest: TripQueryRequest) {
         this.tripQueryResponse = {};
         this.tripQueryResponse.originAddress = tripQueryRequest.originAddress;
+        this.tripQueryResponse.originCoords = tripQueryRequest.originCoords;
         this.tripQueryResponse.destinationAddress = tripQueryRequest.destinationAddress;
+        this.tripQueryResponse.destinationCoords = tripQueryRequest.destinationCoords;
 
         this.direction = tripQueryRequest.timeTarget === TimeTarget.ARRIVE_BY
             ? processDirection.BACKWARDS

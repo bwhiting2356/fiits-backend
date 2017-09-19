@@ -14,7 +14,9 @@ var ProcessManager = (function () {
         this.tripQueryRequest = tripQueryRequest;
         this.tripQueryResponse = {};
         this.tripQueryResponse.originAddress = tripQueryRequest.originAddress;
+        this.tripQueryResponse.originCoords = tripQueryRequest.originCoords;
         this.tripQueryResponse.destinationAddress = tripQueryRequest.destinationAddress;
+        this.tripQueryResponse.destinationCoords = tripQueryRequest.destinationCoords;
         this.direction = tripQueryRequest.timeTarget === timeTarget_1.TimeTarget.ARRIVE_BY
             ? processDirection_1.processDirection.BACKWARDS
             : processDirection_1.processDirection.FORWARDS;
