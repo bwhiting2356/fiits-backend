@@ -120,19 +120,24 @@ export class ProcessManager {
     }
 
     addWalking1Directions(res) {
-        this.tripQueryResponse.originCoords = res.json.routes[0].legs[0].start_location;
-        const steps = res.json.routes[0].legs[0].steps;
+        const leg = res.json.routes[0].legs[0];
+        this.tripQueryResponse.originAddress = leg.start_address;
+        this.tripQueryResponse.originCoords = leg.start_location;
+        const steps = leg.steps;
         this.tripQueryResponse.walking1Points = convertStepsToCoords(steps);
     }
 
     addWalking2Directions(res) {
-        this.tripQueryResponse.destinationCoords = res.json.routes[0].legs[0].end_location;
-        const steps = res.json.routes[0].legs[0].steps;
+        const leg = res.json.routes[0].legs[0];
+        this.tripQueryResponse.destinationAddress = leg.end_address;
+        this.tripQueryResponse.destinationCoords = leg.end_location;
+        const steps = leg.steps;
         this.tripQueryResponse.walking2Points = convertStepsToCoords(steps);
     }
 
     addBicyclingDirections(res) {
-        const steps = res.json.routes[0].legs[0].steps;
+        const leg = res.json.routes[0].legs[0];
+        const steps = leg.steps;
         this.tripQueryResponse.bicyclingPoints = convertStepsToCoords(steps);
     }
 

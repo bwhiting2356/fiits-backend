@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a426350-74af-4c0f-a24e-7cb8dfda3a4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/directions/bicyclingDirectionsRequest.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/directions/buildDirectionsRequest.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/directions/directionsRequest.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/directions/fetchDirections.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/directions/walking1DirectionsRequest.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/directions/walking2DirectionsRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/distanceMatrixRequest.js" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/distanceMatrixRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/distanceMatrixRequest.js.map" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/distanceMatrixRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/distanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/distanceMatrixRequest.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite" afterPath="$PROJECT_DIR$/db.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts" afterPath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts" afterPath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/fetchDistanceMatrix.ts" afterPath="$PROJECT_DIR$/functions/fetchDistanceMatrix.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/fetchDistanceMatrix.test.ts" afterPath="$PROJECT_DIR$/tests/fetchDistanceMatrix.test.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.js.map" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.js" afterPath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.js.map" afterPath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts" afterPath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/processManager/processManager.js" afterPath="$PROJECT_DIR$/tripQuery/processManager/processManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/processManager/processManager.js.map" afterPath="$PROJECT_DIR$/tripQuery/processManager/processManager.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" afterPath="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/tripQuery.js" afterPath="$PROJECT_DIR$/tripQuery/tripQuery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/tripQuery.js.map" afterPath="$PROJECT_DIR$/tripQuery/tripQuery.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tripQuery/tripQuery.ts" afterPath="$PROJECT_DIR$/tripQuery/tripQuery.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tripQuery.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tripQuery.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tripQuery/tripQuery.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -148,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processManager.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="processManager.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processManager.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="134" column="55" lean-forward="false" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
+            <state relative-caret-position="293">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -228,13 +204,13 @@
         <option value="$PROJECT_DIR$/tripQuery/directions/walking1Directions.ts" />
         <option value="$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts" />
         <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts" />
-        <option value="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" />
         <option value="$PROJECT_DIR$/tripQuery/directions/buildDirectionsRequest.ts" />
         <option value="$PROJECT_DIR$/tripQuery/directions/directionsRequest.ts" />
         <option value="$PROJECT_DIR$/tripQuery/directions/walking1DirectionsRequest.ts" />
         <option value="$PROJECT_DIR$/tripQuery/directions/walking2DirectionsRequest.ts" />
         <option value="$PROJECT_DIR$/tripQuery/directions/bicyclingDirectionsRequest.ts" />
         <option value="$PROJECT_DIR$/tripQuery/tripQuery.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" />
       </list>
     </option>
   </component>
@@ -390,12 +366,12 @@
       <workItem from="1504845418775" duration="6067000" />
       <workItem from="1505080249217" duration="57599000" />
       <workItem from="1505683081670" duration="22195000" />
-      <workItem from="1505760148048" duration="13726000" />
+      <workItem from="1505760148048" duration="14214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121283000" />
+    <option name="totallyTimeSpent" value="121771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,15 +716,15 @@
         <state relative-caret-position="225">
           <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
           <folding>
-            <marker date="1505844152000" expanded="true" signature="540:1821" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="588:1391" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="1133:1218" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="1302:1385" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="1461:1595" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="1533:1587" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="1543:1583" ph="{&quot;station&quot;: station...}" />
-            <marker date="1505844152000" expanded="true" signature="1676:1821" ph="{...}" />
-            <marker date="1505844152000" expanded="true" signature="1807:1821" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="540:1821" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="588:1391" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="1133:1218" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="1302:1385" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="1461:1595" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="1533:1587" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="1543:1583" ph="{&quot;station&quot;: station...}" />
+            <marker date="1505844841000" expanded="true" signature="1676:1821" ph="{...}" />
+            <marker date="1505844841000" expanded="true" signature="1807:1821" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -901,16 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processManager.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="134" column="55" lean-forward="false" selection-start-line="134" selection-start-column="55" selection-end-line="134" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tripQuery/directions/buildDirectionsRequest.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -979,10 +945,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tripQuery/tripQuery.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processManager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>

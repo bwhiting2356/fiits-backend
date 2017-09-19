@@ -114,17 +114,22 @@ var ProcessManager = (function () {
         }
     };
     ProcessManager.prototype.addWalking1Directions = function (res) {
-        this.tripQueryResponse.originCoords = res.json.routes[0].legs[0].start_location;
-        var steps = res.json.routes[0].legs[0].steps;
+        var leg = res.json.routes[0].legs[0];
+        this.tripQueryResponse.originAddress = leg.start_address;
+        this.tripQueryResponse.originCoords = leg.start_location;
+        var steps = leg.steps;
         this.tripQueryResponse.walking1Points = convertStepsToCoords(steps);
     };
     ProcessManager.prototype.addWalking2Directions = function (res) {
-        this.tripQueryResponse.destinationCoords = res.json.routes[0].legs[0].end_location;
-        var steps = res.json.routes[0].legs[0].steps;
+        var leg = res.json.routes[0].legs[0];
+        this.tripQueryResponse.destinationAddress = leg.end_address;
+        this.tripQueryResponse.destinationCoords = leg.end_location;
+        var steps = leg.steps;
         this.tripQueryResponse.walking2Points = convertStepsToCoords(steps);
     };
     ProcessManager.prototype.addBicyclingDirections = function (res) {
-        var steps = res.json.routes[0].legs[0].steps;
+        var leg = res.json.routes[0].legs[0];
+        var steps = leg.steps;
         this.tripQueryResponse.bicyclingPoints = convertStepsToCoords(steps);
     };
     ProcessManager.prototype.getStationArrivalTime = function (time, stationDistancePair) {
