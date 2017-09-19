@@ -12,6 +12,6 @@ export const createTempReservation = async (
         type: request.type,
         status: ReservationStatus.temporary,
         stationId: currentStation.station.id,
-        price: 0.75 // TODO: actually compute the price
+        price: 0.50 // TODO: actually compute the price
     });
 };

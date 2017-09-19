@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var processDirection_1 = require("../../processManager/processDirection");
-var addSeconds_1 = require("../../../functions/addSeconds");
+var addSeconds_1 = require("../../../shared/timeHelpers/addSeconds");
 exports.getTime = function (stationNumber, processManager, currentStation) {
     if (stationNumber === 1) {
         if (processManager.direction === processDirection_1.processDirection.FORWARDS) {

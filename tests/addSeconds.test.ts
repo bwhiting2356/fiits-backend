@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { addSeconds } from "../functions/addSeconds";
+import { addSeconds } from "../shared/timeHelpers/addSeconds";
 
 describe('test addSeconds', () => {
     it('should be ok', () => {

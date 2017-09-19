@@ -46,10 +46,10 @@ var travelMode_1 = require("../shared/travelMode");
 var stationDataManager_1 = require("./stationData/stationDataManager");
 var buildDistanceMatrixRequest_1 = require("./buildDistanceMatrixRequest");
 var findSecondReservation_1 = require("./findSecondReservation");
-var addSeconds_1 = require("./addSeconds");
+var addSeconds_1 = require("../shared/timeHelpers/addSeconds");
 var fetchDirections_1 = require("./fetchDirections");
 var getPointsFromDirections_1 = require("./getPointsFromDirections");
-var addMinutes_1 = require("./addMinutes");
+var addMinutes_1 = require("../shared/timeHelpers/addMinutes");
 exports.tripQueryRequest = function (tripQueryRequest) { return __awaiter(_this, void 0, void 0, function () {
     var processManager, stationDataManager, stationData, walkingRequest1, walkingRequest1Promise, walkingRequest2, walkingRequest2Promise, reservation1Success, all;
     return __generator(this, function (_a) {

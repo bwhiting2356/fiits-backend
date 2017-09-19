@@ -20,6 +20,9 @@ export const findReservation = async (
     let stationSuccess;
     while (checking && stationDistanceData.length) {
         const currentStation = stationDistanceData.shift();
+        // TODO: don't remove item from array, just reference and increment a pointer
+        // so that someone could theoretically return to the same station they left from if they want
+
         const reservations = await findAllReservationsAtStation(currentStation);
         let request: ReservRequest = buildReservRequest(stationNumber, processManager, currentStation);
         const result = testInvAgainstReq(reservations, currentStation.station, request);

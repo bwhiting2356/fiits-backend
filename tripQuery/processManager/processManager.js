@@ -6,6 +6,9 @@ var compareWalking1Distance_1 = require("../stationData/compareWalking1Distance"
 var compareWalking2Distance_1 = require("../stationData/compareWalking2Distance");
 var compareBicyclingDistance_1 = require("../stationData/compareBicyclingDistance");
 var stationToCoords_1 = require("../stationData/stationToCoords");
+var addSeconds_1 = require("../../shared/timeHelpers/addSeconds");
+var subtractSeconds_1 = require("../../shared/timeHelpers/subtractSeconds");
+var getBicyclingPrice_1 = require("./getBicyclingPrice");
 var ProcessManager = (function () {
     function ProcessManager(tripQueryRequest) {
         this.tripQueryRequest = tripQueryRequest;
@@ -77,20 +80,10 @@ var ProcessManager = (function () {
     });
     ProcessManager.prototype.getStationDistanceData = function (stationNumber) {
         if (stationNumber === 1) {
-            if (this.direction === processDirection_1.processDirection.FORWARDS) {
-                return this.stationsWalking1Distances;
-            }
-            else if (this.direction === processDirection_1.processDirection.BACKWARDS) {
-                return this.stationsBicyclingDistances;
-            }
+            return this.stationsWalking1Distances;
         }
         else if (stationNumber === 2) {
-            if (this.direction === processDirection_1.processDirection.FORWARDS) {
-                return this.stationsBicyclingDistances;
-            }
-            else if (this.direction === processDirection_1.processDirection.BACKWARDS) {
-                return this.stationsWalking2Distances;
-            }
+            return this.stationsWalking2Distances;
         }
     };
     ;
@@ -100,17 +93,24 @@ var ProcessManager = (function () {
             this.tripQueryResponse.station1Address = stationSuccess.station.address;
             this.tripQueryResponse.walking1Distance = stationSuccess.walking1Distance;
             this.tripQueryResponse.reservation1Time = reservSuccess.time;
+            this.tripQueryResponse.reservation1Price = reservSuccess.price;
+            if (this.direction === processDirection_1.processDirection.BACKWARDS) {
+                this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
+                this.tripQueryResponse.bicyclingPrice = getBicyclingPrice_1.getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
+                this.tripQueryResponse.arrivalTime = addSeconds_1.addSeconds(reservSuccess.time, stationSuccess.walking2Distance);
+            }
         }
         else if (n === 2) {
-            console.log("station success", stationSuccess);
             this.tripQueryResponse.station2Coords = stationToCoords_1.stationToCoords(stationSuccess.station);
             this.tripQueryResponse.station2Address = stationSuccess.station.address;
             this.tripQueryResponse.walking2Distance = stationSuccess.walking2Distance;
             this.tripQueryResponse.reservation2Time = reservSuccess.time;
-        }
-        if (n === 2 && this.direction === processDirection_1.processDirection.FORWARDS ||
-            n === 1 && this.direction === processDirection_1.processDirection.BACKWARDS) {
-            this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
+            this.tripQueryResponse.reservation2Price = reservSuccess.price;
+            if (this.direction === processDirection_1.processDirection.FORWARDS) {
+                this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
+                this.tripQueryResponse.bicyclingPrice = getBicyclingPrice_1.getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
+                this.tripQueryResponse.arrivalTime = subtractSeconds_1.subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+            }
         }
     };
     ProcessManager.prototype.getStationArrivalTime = function (time, stationDistancePair) {

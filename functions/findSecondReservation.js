@@ -40,7 +40,7 @@ var db_1 = require("../db/db");
 var eventType_1 = require("../shared/eventType");
 var reservationStatus_1 = require("../shared/reservationStatus");
 var testInvAgainstReq_1 = require("./testInvAgainstReq/testInvAgainstReq");
-var addSeconds_1 = require("./addSeconds");
+var addSeconds_1 = require("../shared/timeHelpers/addSeconds");
 exports.findSecondReservation = function (stationDistanceDataList, reservation1) { return __awaiter(_this, void 0, void 0, function () {
     var checking, reservSuccess, stationSuccess, currentStation, reservations, time, request, result;
     return __generator(this, function (_a) {

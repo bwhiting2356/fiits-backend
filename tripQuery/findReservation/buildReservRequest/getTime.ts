@@ -1,7 +1,7 @@
 import { ProcessManager } from "../../processManager/processManager";
 import { StationDistanceData } from "../../stationData/stationDistanceData";
 import { processDirection } from "../../processManager/processDirection";
-import { addSeconds } from "../../../functions/addSeconds";
+import { addSeconds } from "../../../shared/timeHelpers/addSeconds";
 
 export const getTime = (
     stationNumber: number,

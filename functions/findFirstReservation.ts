@@ -8,7 +8,7 @@ import { StationDistanceData } from "./stationData/stationDistanceData";
 import { testInvAgainstReq } from "./testInvAgainstReq/testInvAgainstReq";
 import { ReservRequest } from "./testInvAgainstReq/shared/reservRequest";
 import { ReservationResponse } from "./reservationResponse";
-import {addSeconds} from "./addSeconds";
+import {addSeconds} from "../shared/timeHelpers/addSeconds";
 
 export const findFirstReservation = async (
     stationDistanceDataList: StationDistanceData[],

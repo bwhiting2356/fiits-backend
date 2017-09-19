@@ -45,7 +45,7 @@ exports.createTempReservation = function (request, currentStation) { return __aw
                 type: request.type,
                 status: reservationStatus_1.ReservationStatus.temporary,
                 stationId: currentStation.station.id,
-                price: 0.75 // TODO: actually compute the price
+                price: 0.50 // TODO: actually compute the price
             })];
     });
 }); };

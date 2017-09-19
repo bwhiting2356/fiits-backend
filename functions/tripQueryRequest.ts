@@ -12,10 +12,10 @@ import { buildDistanceMatrixRequest } from "./buildDistanceMatrixRequest";
 import { findSecondReservation } from "./findSecondReservation";
 import { TripQueryResponse } from "../shared/tripQueryResponse";
 import { ReservationResponse } from "./reservationResponse";
-import { addSeconds } from "./addSeconds";
+import { addSeconds } from "../shared/timeHelpers/addSeconds";
 import { fetchDirections } from "./fetchDirections";
 import {getPointsFromDirections} from "./getPointsFromDirections";
-import {addTenMinutes} from "./addMinutes";
+import {addTenMinutes} from "../shared/timeHelpers/addMinutes";
 
 export const tripQueryRequest = async (tripQueryRequest: TripQueryRequest) => {
 

@@ -10,6 +10,9 @@ import { compareWalking2Distance } from "../stationData/compareWalking2Distance"
 import { compareBicyclingDistance } from "../stationData/compareBicyclingDistance";
 import { stationToCoords } from "../stationData/stationToCoords";
 import { Coords } from "../../shared/coords";
+import {addSeconds} from "../../shared/timeHelpers/addSeconds";
+import {subtractSeconds} from "../../shared/timeHelpers/subtractSeconds";
+import {getBicyclingPrice} from "./getBicyclingPrice";
 
 export class ProcessManager {
     stationDistanceData: StationDistanceData[];
@@ -83,17 +86,9 @@ export class ProcessManager {
         stationNumber: number,
     ): StationDistanceData[] {
         if (stationNumber === 1) {
-            if (this.direction === processDirection.FORWARDS) {
-                return this.stationsWalking1Distances;
-            } else if (this.direction === processDirection.BACKWARDS) {
-                return this.stationsBicyclingDistances;
-            }
+            return this.stationsWalking1Distances;
         } else if (stationNumber === 2 ) {
-            if (this.direction === processDirection.FORWARDS) {
-                return this.stationsBicyclingDistances;
-            } else if (this.direction === processDirection.BACKWARDS) {
-                return this.stationsWalking2Distances;
-            }
+            return this.stationsWalking2Distances;
         }
     };
 
@@ -103,16 +98,24 @@ export class ProcessManager {
             this.tripQueryResponse.station1Address = stationSuccess.station.address;
             this.tripQueryResponse.walking1Distance = stationSuccess.walking1Distance;
             this.tripQueryResponse.reservation1Time = reservSuccess.time;
+            this.tripQueryResponse.reservation1Price = reservSuccess.price;
+            if (this.direction === processDirection.BACKWARDS) {
+                this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
+                this.tripQueryResponse.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
+                this.tripQueryResponse.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking2Distance);
+            }
+
         } else if (n === 2) {
-            console.log("station success", stationSuccess);
             this.tripQueryResponse.station2Coords = stationToCoords(stationSuccess.station);
             this.tripQueryResponse.station2Address = stationSuccess.station.address;
             this.tripQueryResponse.walking2Distance = stationSuccess.walking2Distance;
             this.tripQueryResponse.reservation2Time = reservSuccess.time;
-        }
-        if (n === 2 && this.direction === processDirection.FORWARDS ||
-            n === 1 && this.direction === processDirection.BACKWARDS) {
-            this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
+            this.tripQueryResponse.reservation2Price = reservSuccess.price;
+            if (this.direction === processDirection.FORWARDS) {
+                this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
+                this.tripQueryResponse.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
+                this.tripQueryResponse.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+            }
         }
     }
 
