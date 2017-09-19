@@ -1,6 +1,7 @@
 import * as express from 'express';
 import {TripQueryRequest} from "../shared/tripQueryRequest";
 import {tripQueryRequest} from "../functions/tripQueryRequest";
+import {tripQuery} from "../tripQuery/tripQuery";
 const router = express.Router();
 
 const { User, Station, Reservation, Trip } = require('../db/db');
@@ -88,26 +89,25 @@ router.post('/trip/', (req, res) => {
     });
 });
 
-const options = {
-    origin: true,
-    methods: ['POST'],
-    credentials: true,
-    maxAge: 3600
-};
-
-router.post('/trip-query', (req, res) => {
-
-    const tqr: TripQueryRequest = {
-        origin: req.body.origin,
-        destination: req.body.destination,
+export const parseTripQueryRequest = (req): TripQueryRequest => {
+    return {
+        originAddress: req.body.originAddress,
+        originCoords: req.body.originCoords,
+        destinationAddress: req.body.destinationAddress,
+        destinationCoords: req.body.destinationCoords,
         time: new Date(req.body.time),
         timeTarget: req.body.timeTarget
     };
     // TODO: object destructuring?
 
-    tripQueryRequest(tqr).then(tripQueryResponse => {
+};
+
+router.post('/trip-query', (req, res) => {
+
+    const tqr = parseTripQueryRequest(req);
+    tripQuery(tqr).then(tripQueryResponse => {
         let response = res.send(tripQueryResponse);
-    })
+    }).catch(err => console.error(err))
 });
 
 module.exports = router;

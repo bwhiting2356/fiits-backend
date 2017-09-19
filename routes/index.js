@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
-var tripQueryRequest_1 = require("../functions/tripQueryRequest");
+var tripQuery_1 = require("../tripQuery/tripQuery");
 var router = express.Router();
 var _a = require('../db/db'), User = _a.User, Station = _a.Station, Reservation = _a.Reservation, Trip = _a.Trip;
 router.get('/users', function (req, res) {
@@ -78,23 +78,22 @@ router.post('/trip/', function (req, res) {
         res.json(trip);
     });
 });
-var options = {
-    origin: true,
-    methods: ['POST'],
-    credentials: true,
-    maxAge: 3600
-};
-router.post('/trip-query', function (req, res) {
-    var tqr = {
-        origin: req.body.origin,
-        destination: req.body.destination,
+exports.parseTripQueryRequest = function (req) {
+    return {
+        originAddress: req.body.originAddress,
+        originCoords: req.body.originCoords,
+        destinationAddress: req.body.destinationAddress,
+        destinationCoords: req.body.destinationCoords,
         time: new Date(req.body.time),
         timeTarget: req.body.timeTarget
     };
     // TODO: object destructuring?
-    tripQueryRequest_1.tripQueryRequest(tqr).then(function (tripQueryResponse) {
+};
+router.post('/trip-query', function (req, res) {
+    var tqr = exports.parseTripQueryRequest(req);
+    tripQuery_1.tripQuery(tqr).then(function (tripQueryResponse) {
         var response = res.send(tripQueryResponse);
-    });
+    }).catch(function (err) { return console.error(err); });
 });
 module.exports = router;
 //# sourceMappingURL=index.js.map

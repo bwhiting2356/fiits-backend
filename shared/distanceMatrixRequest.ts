@@ -1,7 +1,7 @@
 import { Coords } from "./coords";
 
 export interface DistanceMatrixRequest {
-    origins: Coords[],
+    origins: (string | Coords)[],
     destinations: Coords[],
     mode: String
 }

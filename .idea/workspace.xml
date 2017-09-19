@@ -2,24 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a426350-74af-4c0f-a24e-7cb8dfda3a4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/addTenMinutes.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/getPointsFromDirections.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/index.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/addTenMinutes.test.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/functions/addMinutes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/buildReservRequest.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/processManager/processManager.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareBicyclingDistance.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareBicyclingDistance.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareBicyclingDistance.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareWalking1Distance.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareWalking1Distance.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareWalking1Distance.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareWalking2Distance.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareWalking2Distance.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/compareWalking2Distance.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/distanceData.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/getStationData.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationData.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationData.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceDataToCoords.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tripQuery/tripQuery.ts" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/addTenMinutes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryRequest.model.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryRequest.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryResponse.model.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryResponse.model.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryResponse.model.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/shared/processManager.js.map" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/addTenMinutes.js.map" afterPath="$PROJECT_DIR$/functions/addMinutes.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/addTenMinutes.ts" afterPath="$PROJECT_DIR$/functions/addMinutes.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryRequest.model.js" afterPath="$PROJECT_DIR$/tripQuery/stationData/stationData.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/processDirection.js" afterPath="$PROJECT_DIR$/tripQuery/processManager/processDirection.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/processDirection.js.map" afterPath="$PROJECT_DIR$/tripQuery/processManager/processDirection.js.map" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/processDirection.ts" afterPath="$PROJECT_DIR$/tripQuery/processManager/processDirection.ts" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/processManager.js" afterPath="$PROJECT_DIR$/tripQuery/processManager/processManager.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/shared/processManager.ts" afterPath="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite" afterPath="$PROJECT_DIR$/db.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.js" afterPath="$PROJECT_DIR$/db/db.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.js.map" afterPath="$PROJECT_DIR$/db/db.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.ts" afterPath="$PROJECT_DIR$/db/db.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.js" afterPath="$PROJECT_DIR$/functions/tripQueryRequest.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.js.map" afterPath="$PROJECT_DIR$/functions/tripQueryRequest.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.ts" afterPath="$PROJECT_DIR$/functions/tripQueryRequest.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/processManager.js" afterPath="$PROJECT_DIR$/shared/processManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/processManager.js.map" afterPath="$PROJECT_DIR$/shared/processManager.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/processManager.ts" afterPath="$PROJECT_DIR$/shared/processManager.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js.map" afterPath="$PROJECT_DIR$/routes/index.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.ts" afterPath="$PROJECT_DIR$/routes/index.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/distanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/shared/distanceMatrixRequest.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/timeTarget.js.map" afterPath="$PROJECT_DIR$/shared/timeTarget.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/timeTarget.ts" afterPath="$PROJECT_DIR$/shared/timeTarget.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/tripQueryRequest.ts" afterPath="$PROJECT_DIR$/shared/tripQueryRequest.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/tripQueryResponse.ts" afterPath="$PROJECT_DIR$/shared/tripQueryResponse.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/addTenMinutes.test.js" afterPath="$PROJECT_DIR$/tests/addTenMinutes.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/addTenMinutes.test.js.map" afterPath="$PROJECT_DIR$/tests/addTenMinutes.test.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/addTenMinutes.test.ts" afterPath="$PROJECT_DIR$/tests/addTenMinutes.test.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/findFirstReservation.test.js" afterPath="$PROJECT_DIR$/tests/findFirstReservation.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/findFirstReservation.test.js.map" afterPath="$PROJECT_DIR$/tests/findFirstReservation.test.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/findFirstReservation.test.ts" afterPath="$PROJECT_DIR$/tests/findFirstReservation.test.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/processManager.test.js" afterPath="$PROJECT_DIR$/tests/processManager.test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/processManager.test.js.map" afterPath="$PROJECT_DIR$/tests/processManager.test.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/processManager.test.ts" afterPath="$PROJECT_DIR$/tests/processManager.test.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +90,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tripQueryRequest.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/functions/tripQueryRequest.ts">
+      <file leaf-file-name="buildDistanceMatrixRequest.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="distanceMatrixRequest.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shared/distanceMatrixRequest.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tripQuery.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tripQuery/tripQuery.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
               </folding>
@@ -45,89 +124,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addTenMinutes.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/addTenMinutes.ts">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addTenMinutes.test.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/addTenMinutes.test.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+            <state relative-caret-position="270">
+              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addSeconds.test.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/addSeconds.test.ts">
+      <file leaf-file-name="walking1MatrixRequest.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="findFirstReservation.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/findFirstReservation.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addSeconds.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/addSeconds.ts">
+      <file leaf-file-name="walking2MatrixRequest.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="55" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processOrDefer.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/processOrDefer.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deferEvent.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/deferEvent.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+            <state relative-caret-position="105">
+              <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processManager.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shared/processManager.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,11 +163,39 @@
       <file leaf-file-name="tripQueryResponse.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shared/tripQueryResponse.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tripQueryRequest.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shared/tripQueryRequest.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetchDistanceMatrix.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="75" lean-forward="false" selection-start-line="0" selection-start-column="75" selection-end-line="0" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,63 +211,69 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>TripQueryRequest</find>
+      <find>tripQueryRequest</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shared/eventType.ts" />
-        <option value="$PROJECT_DIR$/googleMaps/googleMaps.ts" />
-        <option value="$PROJECT_DIR$/googleMaps/googleMaps.js" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/tests/compareStationDistancePairs.test.ts" />
-        <option value="$PROJECT_DIR$/tests/fetchDistanceMatrix.test.ts" />
-        <option value="$PROJECT_DIR$/functions/getDataValuesFromStations.ts" />
-        <option value="$PROJECT_DIR$/tests/getDataValuesFromStations.test.ts" />
-        <option value="$PROJECT_DIR$/tests/getStationData.test.ts" />
-        <option value="$PROJECT_DIR$/functions/getStationDataFromDB.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/buildTestState.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/isAllowed.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/processDeferredEvent.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/processOriginalEvent.ts" />
-        <option value="$PROJECT_DIR$/functions/mapDistanceResultsToStations.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/testInvAgainstReq.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/processOrDefer.ts" />
-        <option value="$PROJECT_DIR$/shared/reservationStatus.ts" />
-        <option value="$PROJECT_DIR$/db/db.ts" />
-        <option value="$PROJECT_DIR$/shared/travelMode.ts" />
-        <option value="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts" />
-        <option value="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts" />
-        <option value="$PROJECT_DIR$/shared/StationData.ts" />
-        <option value="$PROJECT_DIR$/functions/mapStationDataToCoords.ts" />
-        <option value="$PROJECT_DIR$/shared/stationDistanceData.ts" />
-        <option value="$PROJECT_DIR$/shared/stationDataManager.ts" />
-        <option value="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts" />
-        <option value="$PROJECT_DIR$/functions/compareStationDistancePairs.ts" />
-        <option value="$PROJECT_DIR$/functions/compareWalking2Distance.ts" />
-        <option value="$PROJECT_DIR$/functions/compareBicyclingDistance.ts" />
-        <option value="$PROJECT_DIR$/functions/stationData/stationDataManager.ts" />
-        <option value="$PROJECT_DIR$/functions/reservationResponse.ts" />
-        <option value="$PROJECT_DIR$/tests/addSeconds.test.js" />
-        <option value="$PROJECT_DIR$/tests/addSeconds.test.ts" />
-        <option value="$PROJECT_DIR$/functions/addSeconds.ts" />
-        <option value="$PROJECT_DIR$/functions/findFirstReservation.ts" />
-        <option value="$PROJECT_DIR$/functions/fetchDistanceMatrix.ts" />
-        <option value="$PROJECT_DIR$/functions/fetchWalkingDirections.ts" />
-        <option value="$PROJECT_DIR$/functions/findSecondReservation.ts" />
-        <option value="$PROJECT_DIR$/functions/fetchDirections.ts" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app.ts" />
-        <option value="$PROJECT_DIR$/routes/index.ts" />
-        <option value="$PROJECT_DIR$/functions/getPointsFromDirections.ts" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/deferEvent.ts" />
-        <option value="$PROJECT_DIR$/shared/processManager.ts" />
-        <option value="$PROJECT_DIR$/shared/tripQueryResponse.ts" />
-        <option value="$PROJECT_DIR$/tests/addTenMinutes.test.ts" />
-        <option value="$PROJECT_DIR$/functions/addTenMinutes.ts" />
         <option value="$PROJECT_DIR$/functions/tripQueryRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/fetchDistanceMatrix.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findStation1ResSecond.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findStation2ResFirst.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findStation2ResSecond.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest.test.ts" />
+        <option value="$PROJECT_DIR$/functions/addTenMinutes.ts" />
+        <option value="$PROJECT_DIR$/tests/addTenMinutes.test.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findStation1ResFirst.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.ts" />
+        <option value="$PROJECT_DIR$/shared/processManager.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/distanceData.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/compareBicyclingDistance.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/buildDistanceMatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/walking2MatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/walking1MatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/walking2MatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/bicyclingMatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/getBicyclingOriginStation.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/getStationDistanceData.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/buildReservRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/createStationDataList.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/addBicyclingDistances.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/addWalking1Distances.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/addWalking2Distances.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/stationDataManager.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/getStationData.ts" />
+        <option value="$PROJECT_DIR$/db/db.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/mapToCoords.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/stationDistanceDataToCoords.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts" />
+        <option value="$PROJECT_DIR$/shared/timeTarget.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/tripQuery.ts" />
+        <option value="$PROJECT_DIR$/shared/tripQueryRequest.ts" />
+        <option value="$PROJECT_DIR$/routes/index.ts" />
+        <option value="$PROJECT_DIR$/shared/tripQueryResponse.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/processManager/processManager.js" />
+        <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/shared/distanceMatrixRequest.ts" />
+        <option value="$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.ts" />
       </list>
     </option>
   </component>
@@ -233,7 +294,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
+    <option name="x" value="13" />
     <option name="y" value="23" />
     <option name="width" value="1217" />
     <option name="height" value="777" />
@@ -254,6 +315,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -265,7 +327,12 @@
             <path>
               <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
               <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="functions" type="462c0819:PsiDirectoryNode" />
+              <item name="mock-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
@@ -275,13 +342,43 @@
             <path>
               <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
               <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="tripQuery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="tripQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="distanceMatrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="tripQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="findReservation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="tripQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="processManager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="tripQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="processManager" type="462c0819:PsiDirectoryNode" />
+              <item name="processManager.ts" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="tripQuery" type="462c0819:PsiDirectoryNode" />
+              <item name="stationData" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,14 +388,18 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/functions/stationData" />
-      <recent name="$PROJECT_DIR$/functions/stationDataManager" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/functionsObservables" />
       <recent name="$PROJECT_DIR$/functions/testInvAgainstReq" />
       <recent name="$PROJECT_DIR$/shared" />
       <recent name="$PROJECT_DIR$/functions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tripQuery/stationData" />
+      <recent name="$PROJECT_DIR$/tripQuery/distanceMatrix" />
+      <recent name="$PROJECT_DIR$/tripQuery/processManager" />
+      <recent name="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest" />
+      <recent name="$PROJECT_DIR$/functions/stationData" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,25 +429,35 @@
       <updated>1504748477251</updated>
       <workItem from="1504748478695" duration="21696000" />
       <workItem from="1504845418775" duration="6067000" />
-      <workItem from="1505080249217" duration="46653000" />
+      <workItem from="1505080249217" duration="57599000" />
+      <workItem from="1505683081670" duration="22195000" />
+      <workItem from="1505760148048" duration="3929000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74416000" />
+    <option name="totallyTimeSpent" value="111486000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="23" width="1217" height="777" extended-state="0" />
+    <frame x="13" y="23" width="1217" height="777" extended-state="0" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5033445" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991204" sideWeight="0.49665552" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29032257" sideWeight="0.49665552" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -354,6 +465,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -376,9 +488,7 @@
         <option value="$PROJECT_DIR$/functions/mergeDistanceMatrixWithStations.js" />
         <option value="$PROJECT_DIR$/tests/mergeDistanceMatrixWithStations.test.js" />
         <option value="$PROJECT_DIR$/shared/stationDistancePair.js" />
-        <option value="$PROJECT_DIR$/shared/processDirection.js" />
         <option value="$PROJECT_DIR$/tests/compareStationDistancePairs.test.js" />
-        <option value="$PROJECT_DIR$/shared/processManager.js" />
         <option value="$PROJECT_DIR$/tests/processManager.test.js" />
         <option value="$PROJECT_DIR$/functions/findFirstReservation.js" />
         <option value="$PROJECT_DIR$/tests/findFirstReservation.test.js" />
@@ -401,9 +511,7 @@
         <option value="$PROJECT_DIR$/mock-data/stationData.js.map" />
         <option value="$PROJECT_DIR$/shared/distanceMatrixRequest.js.map" />
         <option value="$PROJECT_DIR$/shared/timeTarget.js.map" />
-        <option value="$PROJECT_DIR$/shared/processManager.js.map" />
         <option value="$PROJECT_DIR$/shared/stationDistancePair.js.map" />
-        <option value="$PROJECT_DIR$/shared/processDirection.js.map" />
         <option value="$PROJECT_DIR$/shared/tripQueryRequest.js.map" />
         <option value="$PROJECT_DIR$/shared/coords.js.map" />
         <option value="$PROJECT_DIR$/shared/distanceMatrixResultItem.js.map" />
@@ -420,10 +528,8 @@
         <option value="$PROJECT_DIR$/tests/getDataValuesFromStations.test.js.map" />
         <option value="$PROJECT_DIR$/tests/getDataValuesFromStations.test.js" />
         <option value="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixResultRow.model.js.map" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryRequest.model.js.map" />
         <option value="$PROJECT_DIR$/functions/testInvAgainstReq/shared/timeTarget.js.map" />
         <option value="$PROJECT_DIR$/functions/testInvAgainstReq/shared/stationCoordsData.model.js.map" />
-        <option value="$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryResponse.model.js.map" />
         <option value="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixRequest.model.js.map" />
         <option value="$PROJECT_DIR$/shared/travelMode.js.map" />
         <option value="$PROJECT_DIR$/shared/travelMode.js" />
@@ -447,10 +553,22 @@
         <option value="$PROJECT_DIR$/routes/index.js.map" />
         <option value="$PROJECT_DIR$/functions/getPointsFromDirections.js" />
         <option value="$PROJECT_DIR$/functions/getPointsFromDirections.js.map" />
-        <option value="$PROJECT_DIR$/functions/addTenMinutes.js.map" />
-        <option value="$PROJECT_DIR$/functions/addTenMinutes.js" />
         <option value="$PROJECT_DIR$/tests/addTenMinutes.test.js" />
         <option value="$PROJECT_DIR$/tests/addTenMinutes.test.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.js" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.js" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.js" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.js" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.js" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/distanceData.js" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/distanceData.js.map" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.js" />
+        <option value="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.js.map" />
       </list>
     </option>
   </component>
@@ -462,243 +580,187 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservEvent.ts">
+    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/processOriginalEvent.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservRequest.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/reservationStatus.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservationStatus.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/testInvAgainstReq.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/getBicyclingOriginStation.ts" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest.test.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
-            <element signature="e#0#51#0" expanded="false" />
+            <element signature="e#0#74#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/travelMode.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processDirection.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/walking2MatrixRequest.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="true" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="11" column="69" lean-forward="false" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/createStationDataList.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/addBicyclingDistances.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/addWalking1Distances.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/addWalking2Distances.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/compareBicyclingDistance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/compareWalking1Distance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/compareWalking2Distance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/distanceData.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/stationDataManager.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/getStationDistanceData.ts" />
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="4" column="66" lean-forward="false" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/getStationData.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/buildReservRequest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#76#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/db.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="104" column="44" lean-forward="false" selection-start-line="104" selection-start-column="44" selection-end-line="104" selection-end-column="44" />
-          <folding>
-            <element signature="e#212#271#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/stationData/compareWalking1Distance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/stationData/compareWalking2Distance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/isReservationPossible.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/stationData/compareBicyclingDistance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/shared/tripQueryResponse.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/stationData/stationDataManager.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="40" column="57" lean-forward="false" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/stationData/stationDistanceData.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/addSeconds.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/compareStationDistancePairs.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/fetchDistanceMatrix.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/findFirstReservation.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/processManager.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/mergeDistanceMatrixWithStations.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/mapStationDataToCoords.test.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/fetchDirections.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts">
+    <entry file="file://$PROJECT_DIR$/mock-data/stationData.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#72#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/fetchDistanceMatrix.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="80" lean-forward="false" selection-start-line="3" selection-start-column="80" selection-end-line="3" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#72#0" expanded="false" />
-          </folding>
+          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/findSecondReservation.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/stationToCoords.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#0#39#0" expanded="false" />
+            <element signature="e#0#44#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getDataValuesFromStations.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/stationData.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
@@ -706,208 +768,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getStationDataFromDB.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/stationData/stationDistanceDataToCoords.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="51" lean-forward="false" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/mapDistanceResultsToStations.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/mapStationDataToCoords.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        <state relative-caret-position="90">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/mergeDistanceMatrixWithStations.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#56#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/reservationResponse.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/fetchDirections.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-          <folding>
-            <element signature="e#1#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/promise-auto/lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/tripQueryRequest.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/stationData/StationData.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/getPointsFromDirections.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/processOrDefer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="62" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions/testInvAgainstReq/deferEvent.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/tripQueryResponse.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/addSeconds.test.ts">
+    <entry file="file://$PROJECT_DIR$/shared/coords.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/addSeconds.ts">
+    <entry file="file://$PROJECT_DIR$/shared/distanceMatrixResultItem.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="55" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="55" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/addTenMinutes.test.ts">
+    <entry file="file://$PROJECT_DIR$/shared/eventType.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/reservationStatus.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/stationDistancePair.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#67#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/addTenMinutes.ts">
+    <entry file="file://$PROJECT_DIR$/shared/timeTarget.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/processManager.ts">
+    <entry file="file://$PROJECT_DIR$/shared/travelMode.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processManager.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/findFirstReservation.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions/tripQueryRequest.ts">
+    <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="75" lean-forward="false" selection-start-line="0" selection-start-column="75" selection-end-line="0" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/tripQueryResponse.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/tripQueryRequest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/processManager/processManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/distanceMatrixRequest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/tripQuery.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
           </folding>
         </state>
       </provider>

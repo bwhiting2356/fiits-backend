@@ -1,9 +1,9 @@
 import { TripQueryRequest } from "../shared/tripQueryRequest";
-import { ProcessManager } from "../shared/processManager";
+import { ProcessManager } from "../tripQuery/processManager/processManager";
 
 import { getStationDataFromDB } from "./getStationDataFromDB";
 import { fetchDistanceMatrix } from "./fetchDistanceMatrix";
-import { processDirection } from "../shared/processDirection";
+import { processDirection } from "../tripQuery/processManager/processDirection";
 import { getDataValuesFromStations } from "./getDataValuesFromStations";
 import { findFirstReservation } from "./findFirstReservation";
 import { TravelMode } from "../shared/travelMode";
@@ -15,7 +15,7 @@ import { ReservationResponse } from "./reservationResponse";
 import { addSeconds } from "./addSeconds";
 import { fetchDirections } from "./fetchDirections";
 import {getPointsFromDirections} from "./getPointsFromDirections";
-import {addTenMinutes} from "./addTenMinutes";
+import {addTenMinutes} from "./addMinutes";
 
 export const tripQueryRequest = async (tripQueryRequest: TripQueryRequest) => {
 
@@ -49,10 +49,7 @@ export const tripQueryRequest = async (tripQueryRequest: TripQueryRequest) => {
             });
 
         const reservation1Success = walkingRequest1Promise
-            .then((reservationResponse: ReservationResponse) => {
-            processManager.walking1Duration = reservationResponse.station.walking1Distance.duration;
-            processManager.walking1DistanceText = reservationResponse.station.walking1Distance.distanceText;
-
+            .then((h) => {
                 return findFirstReservation(
                     stationDataManager.stationsWalking1Distances,
                     tripQueryRequest
@@ -96,9 +93,6 @@ export const tripQueryRequest = async (tripQueryRequest: TripQueryRequest) => {
                     processManager.reservation2EndTime = addTenMinutes(reservation2.reservation.time);
                     processManager.reservation2Price = 0.75;  // TODO: compute the price somehow
                     processManager.station2 = reservation2.station.station;
-
-                    // processManager.walking2Duration = reservation2.station.walking1Distance.duration;
-                    // processManager.walking2DistanceText = reservation2.station.walking1Distance.distanceText;
 
                     processManager.arrivalTime = addSeconds(
                         reservation2.reservation.time,

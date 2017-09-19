@@ -16,6 +16,10 @@ export const User = sequelize.define('user', {
 });
 
 export const Station = sequelize.define('station', {
+    address: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     currentInv: {
         type: Sequelize.INTEGER,
         defaultValue: 0
@@ -57,6 +61,10 @@ export const Reservation = sequelize.define('reservation', {
             ReservationStatus.temporary
         ),
         defaultValue: ReservationStatus.pending
+    },
+    price: {
+        type: Sequelize.FLOAT,
+        allowNull: false
     }
 });
 

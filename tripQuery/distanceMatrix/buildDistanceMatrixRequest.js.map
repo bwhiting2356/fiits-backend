@@ -1,0 +1,1 @@
+{"version":3,"file":"buildDistanceMatrixRequest.js","sourceRoot":"","sources":["buildDistanceMatrixRequest.ts"],"names":[],"mappings":";;AAGA,0FAAyF;AAE5E,QAAA,0BAA0B,GAAG,UACtC,KAAsB,EACtB,mBAA0C,EAC1C,IAAY;IAGZ,IAAM,iBAAiB,GAAG,yDAA2B,CAAC,mBAAmB,CAAC,CAAC;IAC3E,MAAM,CAAC;QACH,OAAO,EAAE,CAAC,KAAK,CAAC;QAChB,YAAY,EAAE,iBAAiB;QAC/B,IAAI,EAAE,IAAI;KACb,CAAA;AACL,CAAC,CAAC"}

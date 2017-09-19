@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
 var findFirstReservation_1 = require("../functions/findFirstReservation");
-var processManager_1 = require("../shared/processManager");
+var processManager_1 = require("../tripQuery/processManager/processManager");
 var timeTarget_1 = require("../shared/timeTarget");
 describe('test findFirstReservation', function () {
     var processManager;

@@ -14,6 +14,10 @@ exports.User = exports.sequelize.define('user', {
     name: Sequelize.STRING
 });
 exports.Station = exports.sequelize.define('station', {
+    address: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
     currentInv: {
         type: Sequelize.INTEGER,
         defaultValue: 0
@@ -45,6 +49,10 @@ exports.Reservation = exports.sequelize.define('reservation', {
     status: {
         type: Sequelize.ENUM(reservationStatus_1.ReservationStatus.fulfilled, reservationStatus_1.ReservationStatus.cancelled, reservationStatus_1.ReservationStatus.missed, reservationStatus_1.ReservationStatus.pending, reservationStatus_1.ReservationStatus.temporary),
         defaultValue: reservationStatus_1.ReservationStatus.pending
+    },
+    price: {
+        type: Sequelize.FLOAT,
+        allowNull: false
     }
 });
 var Trip = exports.sequelize.define('trip', {
