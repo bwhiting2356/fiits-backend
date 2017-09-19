@@ -7,7 +7,7 @@ exports.walking2MatrixRequest = function (tripQueryRequest, processManager) {
     var walkingRequest2 = buildDistanceMatrixRequest_1.buildDistanceMatrixRequest(tripQueryRequest.destinationAddress, processManager.stationDistanceData, travelMode_1.TravelMode.walking);
     return fetchDistanceMatrix_1.fetchDistanceMatrix(walkingRequest2)
         .then(function (res) {
-        processManager.addWalking1Distances(res);
+        processManager.addWalking2Distances(res);
         return processManager;
     });
 };

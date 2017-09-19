@@ -16,7 +16,7 @@ export const walking2MatrixRequest = (
     );
     return fetchDistanceMatrix(walkingRequest2)
         .then(res => {
-            processManager.addWalking1Distances(res);
+            processManager.addWalking2Distances(res);
             return processManager;
         });
 };

@@ -6,11 +6,10 @@ import { walking1MatrixRequest } from "./distanceMatrix/walking1MatrixRequest";
 import { walking2MatrixRequest } from "./distanceMatrix/walking2MatrixRequest";
 import { bicyclingMatrixRequest } from "./distanceMatrix/bicyclingMatrixRequest";
 import { TripQueryResponse } from "../shared/tripQueryResponse";
+import {parseTripQueryRequest} from "./parseTripQueryRequest";
 
-export const tripQuery = async (
-    tripQueryRequest: TripQueryRequest
-): Promise<TripQueryResponse> => {
-    console.log(tripQueryRequest);
+export const tripQuery = async (req): Promise<TripQueryResponse> => {
+    const tripQueryRequest = parseTripQueryRequest(req);
     const processManager = new ProcessManager(tripQueryRequest);
     return getStationData(processManager)
         .then(processManager => walking1MatrixRequest(tripQueryRequest, processManager))

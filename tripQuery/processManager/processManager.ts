@@ -18,8 +18,8 @@ export class ProcessManager {
 
     constructor(private tripQueryRequest: TripQueryRequest) {
         this.tripQueryResponse = {};
-        this.tripQueryResponse.originAddress = tripQueryRequest.origin;
-        this.tripQueryResponse.destinationAddress = tripQueryRequest.destination;
+        this.tripQueryResponse.originAddress = tripQueryRequest.originAddress;
+        this.tripQueryResponse.destinationAddress = tripQueryRequest.destinationAddress;
 
         this.direction = tripQueryRequest.timeTarget === TimeTarget.ARRIVE_BY
             ? processDirection.BACKWARDS
@@ -38,7 +38,6 @@ export class ProcessManager {
     }
 
     addWalking1Distances(walking1Results) {
-        console.log(walking1Results);
         const distances = walking1Results.json.rows[0].elements;
         for (let i = 0; i < this.stationDistanceData.length; i++) {
             this.stationDistanceData[i].walking1Distance = {
@@ -105,6 +104,7 @@ export class ProcessManager {
             this.tripQueryResponse.walking1Distance = stationSuccess.walking1Distance;
             this.tripQueryResponse.reservation1Time = reservSuccess.time;
         } else if (n === 2) {
+            console.log("station success", stationSuccess);
             this.tripQueryResponse.station2Coords = stationToCoords(stationSuccess.station);
             this.tripQueryResponse.station2Address = stationSuccess.station.address;
             this.tripQueryResponse.walking2Distance = stationSuccess.walking2Distance;

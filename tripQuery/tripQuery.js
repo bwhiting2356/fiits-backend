@@ -42,10 +42,11 @@ var processManager_1 = require("./processManager/processManager");
 var walking1MatrixRequest_1 = require("./distanceMatrix/walking1MatrixRequest");
 var walking2MatrixRequest_1 = require("./distanceMatrix/walking2MatrixRequest");
 var bicyclingMatrixRequest_1 = require("./distanceMatrix/bicyclingMatrixRequest");
-exports.tripQuery = function (tripQueryRequest) { return __awaiter(_this, void 0, void 0, function () {
-    var processManager;
+var parseTripQueryRequest_1 = require("./parseTripQueryRequest");
+exports.tripQuery = function (req) { return __awaiter(_this, void 0, void 0, function () {
+    var tripQueryRequest, processManager;
     return __generator(this, function (_a) {
-        console.log(tripQueryRequest);
+        tripQueryRequest = parseTripQueryRequest_1.parseTripQueryRequest(req);
         processManager = new processManager_1.ProcessManager(tripQueryRequest);
         return [2 /*return*/, getStationData_1.getStationData(processManager)
                 .then(function (processManager) { return walking1MatrixRequest_1.walking1MatrixRequest(tripQueryRequest, processManager); })

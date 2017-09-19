@@ -10,8 +10,8 @@ var ProcessManager = (function () {
     function ProcessManager(tripQueryRequest) {
         this.tripQueryRequest = tripQueryRequest;
         this.tripQueryResponse = {};
-        this.tripQueryResponse.originAddress = tripQueryRequest.origin;
-        this.tripQueryResponse.destinationAddress = tripQueryRequest.destination;
+        this.tripQueryResponse.originAddress = tripQueryRequest.originAddress;
+        this.tripQueryResponse.destinationAddress = tripQueryRequest.destinationAddress;
         this.direction = tripQueryRequest.timeTarget === timeTarget_1.TimeTarget.ARRIVE_BY
             ? processDirection_1.processDirection.BACKWARDS
             : processDirection_1.processDirection.FORWARDS;
@@ -28,10 +28,8 @@ var ProcessManager = (function () {
         }); });
     };
     ProcessManager.prototype.addWalking1Distances = function (walking1Results) {
-        console.log(walking1Results);
         var distances = walking1Results.json.rows[0].elements;
         for (var i = 0; i < this.stationDistanceData.length; i++) {
-            console.log(distances[i]);
             this.stationDistanceData[i].walking1Distance = {
                 distanceText: distances[i].distance.text,
                 duration: distances[i].duration.value
@@ -104,6 +102,7 @@ var ProcessManager = (function () {
             this.tripQueryResponse.reservation1Time = reservSuccess.time;
         }
         else if (n === 2) {
+            console.log("station success", stationSuccess);
             this.tripQueryResponse.station2Coords = stationToCoords_1.stationToCoords(stationSuccess.station);
             this.tripQueryResponse.station2Address = stationSuccess.station.address;
             this.tripQueryResponse.walking2Distance = stationSuccess.walking2Distance;

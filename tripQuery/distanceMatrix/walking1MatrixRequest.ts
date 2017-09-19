@@ -2,23 +2,19 @@ import { TripQueryRequest } from "../../shared/tripQueryRequest";
 import { TravelMode } from "../../shared/travelMode";
 import { fetchDistanceMatrix } from "./fetchDistanceMatrix";
 import { buildDistanceMatrixRequest } from "./buildDistanceMatrixRequest";
-import {ProcessManager} from "../processManager/processManager";
+import { ProcessManager } from "../processManager/processManager";
+import { originAddressOrCoords } from "./originAddressOrCoords";
 
 export const walking1MatrixRequest = (
     tripQueryRequest: TripQueryRequest,
     processManager: ProcessManager
 ): Promise<ProcessManager> => {
 
-    const origin = tripQueryRequest.originAddress !== 'Current Location'
-        ? tripQueryRequest.originAddress
-        : tripQueryRequest.originCoords;
-
     const walkingRequest1 = buildDistanceMatrixRequest(
-        origin,
+        originAddressOrCoords(tripQueryRequest),
         processManager.stationDistanceData,
         TravelMode.walking
     );
-    console.log(walkingRequest1);
     return fetchDistanceMatrix(walkingRequest1)
         .then(res => {
             processManager.addWalking1Distances(res);

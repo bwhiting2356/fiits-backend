@@ -37,31 +37,30 @@ router.get('/reservation/:id', function (req, res) {
         res.json(reservation);
     });
 });
-router.post('/reservation/', function (req, res) {
-    var _a = req.body, userId = _a.userId, stationId = _a.stationId;
-    var station, result;
-    Station.findById(stationId).then(function (s) {
-        station = s;
-    });
-    Reservation.findAll({
-        where: {
-            stationId: stationId,
-            status: 'pending'
-        }
-    }).then(function (reservations) {
-        result = testInventory(reservations, station, req.body);
-    });
-    if (result) {
-        Reservation.create().then(function (reservation) {
-            res.json(reservation);
-        });
-    }
-    else {
-        res.json({
-            response: "Can't create a reservation, sorry"
-        });
-    }
-});
+// router.post('/reservation/', (req, res) => {
+//     const { userId, stationId } = req.body;
+//     let station, result;
+//     Station.findById(stationId).then(s => {
+//         station = s;
+//     });
+//     Reservation.findAll({
+//         where: {
+//             stationId: stationId,
+//             status: 'pending'
+//         }
+//     }).then(reservations => {
+//         result = testInventory(reservations, station, req.body);
+//     });
+//     if (result) {
+//         Reservation.create().then(reservation => {
+//             res.json(reservation)
+//         });
+//     } else {
+//         res.json({
+//             response: "Can't create a reservation, sorry"
+//         });
+//     }
+// });
 router.get('/trips', function (req, res) {
     Trip.findAll().then(function (trips) {
         res.json(trips);
@@ -78,20 +77,8 @@ router.post('/trip/', function (req, res) {
         res.json(trip);
     });
 });
-exports.parseTripQueryRequest = function (req) {
-    return {
-        originAddress: req.body.originAddress,
-        originCoords: req.body.originCoords,
-        destinationAddress: req.body.destinationAddress,
-        destinationCoords: req.body.destinationCoords,
-        time: new Date(req.body.time),
-        timeTarget: req.body.timeTarget
-    };
-    // TODO: object destructuring?
-};
 router.post('/trip-query', function (req, res) {
-    var tqr = exports.parseTripQueryRequest(req);
-    tripQuery_1.tripQuery(tqr).then(function (tripQueryResponse) {
+    tripQuery_1.tripQuery(req).then(function (tripQueryResponse) {
         var response = res.send(tripQueryResponse);
     }).catch(function (err) { return console.error(err); });
 });
