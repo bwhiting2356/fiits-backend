@@ -34,7 +34,7 @@ export const findReservation = async (
         }
     }
     if (reservSuccess) {
-        processManager.addResponseData(stationNumber, stationSuccess, reservSuccess);
+        processManager.addReservResponseData(stationNumber, stationSuccess, reservSuccess);
         return processManager;
     } else {
         throw new Error('No reservations available') // TODO: more detailed error message, handle error

@@ -43,6 +43,9 @@ var walking1MatrixRequest_1 = require("./distanceMatrix/walking1MatrixRequest");
 var walking2MatrixRequest_1 = require("./distanceMatrix/walking2MatrixRequest");
 var bicyclingMatrixRequest_1 = require("./distanceMatrix/bicyclingMatrixRequest");
 var parseTripQueryRequest_1 = require("./parseTripQueryRequest");
+var walking1DirectionsRequest_1 = require("./directions/walking1DirectionsRequest");
+var walking2DirectionsRequest_1 = require("./directions/walking2DirectionsRequest");
+var bicyclingDirectionsRequest_1 = require("./directions/bicyclingDirectionsRequest");
 exports.tripQuery = function (req) { return __awaiter(_this, void 0, void 0, function () {
     var tripQueryRequest, processManager;
     return __generator(this, function (_a) {
@@ -52,8 +55,11 @@ exports.tripQuery = function (req) { return __awaiter(_this, void 0, void 0, fun
                 .then(function (processManager) { return walking1MatrixRequest_1.walking1MatrixRequest(tripQueryRequest, processManager); })
                 .then(function (processManager) { return walking2MatrixRequest_1.walking2MatrixRequest(tripQueryRequest, processManager); })
                 .then(function (processManager) { return findReservation_1.findReservation(processManager.firstStation, processManager); })
+                .then(function (processManager) { return walking1DirectionsRequest_1.walking1DirectionsRequest(processManager); })
                 .then(function (processManager) { return bicyclingMatrixRequest_1.bicyclingMatrixRequest(processManager); })
                 .then(function (processManager) { return findReservation_1.findReservation(processManager.secondStation, processManager); })
+                .then(function (processManager) { return walking2DirectionsRequest_1.walking2DirectionsRequest(processManager); })
+                .then(function (processManager) { return bicyclingDirectionsRequest_1.bicyclingDirectionsRequest(processManager); })
                 .then(function (processManager) { return processManager.tripQueryResponse; })];
     });
 }); };

@@ -1,11 +1,7 @@
 import { buildDistanceMatrixRequest } from "./buildDistanceMatrixRequest";
-import { TripQueryRequest } from "../../shared/tripQueryRequest";
 import { TravelMode } from "../../shared/travelMode";
 import { fetchDistanceMatrix } from "./fetchDistanceMatrix";
-import { StationDataManager } from "../stationData/stationDataManager";
-import {ProcessManager} from "../processManager/processManager";
-import {processDirection} from "../processManager/processDirection";
-import {StationData} from "../stationData/stationData";
+import { ProcessManager } from "../processManager/processManager";
 
 export const bicyclingMatrixRequest = (
     processManager: ProcessManager,

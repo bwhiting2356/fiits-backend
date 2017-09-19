@@ -1,4 +1,4 @@
-import { Coords } from "./coords";
+import { Coords } from "../../shared/coords";
 
 export interface DistanceMatrixRequest {
     origins: (string | Coords)[],

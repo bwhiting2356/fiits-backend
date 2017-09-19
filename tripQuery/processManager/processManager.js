@@ -87,7 +87,7 @@ var ProcessManager = (function () {
         }
     };
     ;
-    ProcessManager.prototype.addResponseData = function (n, stationSuccess, reservSuccess) {
+    ProcessManager.prototype.addReservResponseData = function (n, stationSuccess, reservSuccess) {
         if (n === 1) {
             this.tripQueryResponse.station1Coords = stationToCoords_1.stationToCoords(stationSuccess.station);
             this.tripQueryResponse.station1Address = stationSuccess.station.address;
@@ -112,6 +112,20 @@ var ProcessManager = (function () {
                 this.tripQueryResponse.arrivalTime = subtractSeconds_1.subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
             }
         }
+    };
+    ProcessManager.prototype.addWalking1Directions = function (res) {
+        this.tripQueryResponse.originCoords = res.json.routes[0].legs[0].start_location;
+        var steps = res.json.routes[0].legs[0].steps;
+        this.tripQueryResponse.walking1Points = convertStepsToCoords(steps);
+    };
+    ProcessManager.prototype.addWalking2Directions = function (res) {
+        this.tripQueryResponse.destinationCoords = res.json.routes[0].legs[0].end_location;
+        var steps = res.json.routes[0].legs[0].steps;
+        this.tripQueryResponse.walking2Points = convertStepsToCoords(steps);
+    };
+    ProcessManager.prototype.addBicyclingDirections = function (res) {
+        var steps = res.json.routes[0].legs[0].steps;
+        this.tripQueryResponse.bicyclingPoints = convertStepsToCoords(steps);
     };
     ProcessManager.prototype.getStationArrivalTime = function (time, stationDistancePair) {
         var newDate;
@@ -149,4 +163,12 @@ var ProcessManager = (function () {
     return ProcessManager;
 }());
 exports.ProcessManager = ProcessManager;
+var convertStepsToCoords = function (steps) {
+    var allCoords = new Set();
+    steps.forEach(function (step) {
+        allCoords.add(step.start_location);
+        allCoords.add(step.end_location);
+    });
+    return Array.from(allCoords);
+};
 //# sourceMappingURL=processManager.js.map

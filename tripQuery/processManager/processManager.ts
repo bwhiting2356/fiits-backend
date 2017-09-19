@@ -92,7 +92,7 @@ export class ProcessManager {
         }
     };
 
-    addResponseData(n: number, stationSuccess, reservSuccess) {
+    addReservResponseData(n: number, stationSuccess, reservSuccess) {
         if (n === 1) {
             this.tripQueryResponse.station1Coords = stationToCoords(stationSuccess.station);
             this.tripQueryResponse.station1Address = stationSuccess.station.address;
@@ -119,6 +119,23 @@ export class ProcessManager {
         }
     }
 
+    addWalking1Directions(res) {
+        this.tripQueryResponse.originCoords = res.json.routes[0].legs[0].start_location;
+        const steps = res.json.routes[0].legs[0].steps;
+        this.tripQueryResponse.walking1Points = convertStepsToCoords(steps);
+    }
+
+    addWalking2Directions(res) {
+        this.tripQueryResponse.destinationCoords = res.json.routes[0].legs[0].end_location;
+        const steps = res.json.routes[0].legs[0].steps;
+        this.tripQueryResponse.walking2Points = convertStepsToCoords(steps);
+    }
+
+    addBicyclingDirections(res) {
+        const steps = res.json.routes[0].legs[0].steps;
+        this.tripQueryResponse.bicyclingPoints = convertStepsToCoords(steps);
+    }
+
     getStationArrivalTime(time: Date, stationDistancePair: StationDistancePair): Date {
         let newDate: Date;
         if (this.direction === processDirection.FORWARDS) {
@@ -143,4 +160,13 @@ export class ProcessManager {
             : this.tripQueryResponse.station2Coords;
     }
 }
+
+const convertStepsToCoords = (steps): Coords[] => {
+    let allCoords = new Set<Coords>();
+    steps.forEach(step => {
+        allCoords.add(step.start_location);
+        allCoords.add(step.end_location);
+    });
+    return Array.from(allCoords);
+};
 

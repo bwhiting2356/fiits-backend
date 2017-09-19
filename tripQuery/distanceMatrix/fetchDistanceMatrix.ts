@@ -1,4 +1,4 @@
-import { DistanceMatrixRequest } from "../../shared/distanceMatrixRequest";
+import { DistanceMatrixRequest } from "./distanceMatrixRequest";
 import * as googleMapsClient from '../../googleMaps/googleMapsClient';
 
 export const fetchDistanceMatrix = async (distanceMatrixRequest: DistanceMatrixRequest) => {

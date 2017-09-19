@@ -1,4 +1,4 @@
-import { DistanceMatrixRequest } from "../shared/distanceMatrixRequest";
+import { DistanceMatrixRequest } from "../tripQuery/distanceMatrix/distanceMatrixRequest";
 import { Coords } from "../shared/coords";
 
 export const buildDistanceMatrixWalkingReq = (

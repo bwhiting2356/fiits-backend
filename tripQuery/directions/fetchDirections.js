@@ -36,44 +36,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var testInvAgainstReq_1 = require("../../functions/testInvAgainstReq/testInvAgainstReq");
-var buildReservRequest_1 = require("./buildReservRequest/buildReservRequest");
-var findAllReservationsAtStation_1 = require("./findAllReservationsAtStation");
-var createTempReservation_1 = require("./createTempReservation");
-exports.findReservation = function (stationNumber, processManager) { return __awaiter(_this, void 0, void 0, function () {
-    var stationDistanceData, checking, reservSuccess, stationSuccess, currentStation, reservations, request, result;
+var googleMapsClient = require("../../googleMaps/googleMapsClient");
+exports.fetchDirections = function (directionsRequest) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                stationDistanceData = processManager.getStationDistanceData(stationNumber);
-                checking = true;
-                _a.label = 1;
-            case 1:
-                if (!(checking && stationDistanceData.length)) return [3 /*break*/, 5];
-                currentStation = stationDistanceData.shift();
-                return [4 /*yield*/, findAllReservationsAtStation_1.findAllReservationsAtStation(currentStation)];
-            case 2:
-                reservations = _a.sent();
-                request = buildReservRequest_1.buildReservRequest(stationNumber, processManager, currentStation);
-                result = testInvAgainstReq_1.testInvAgainstReq(reservations, currentStation.station, request);
-                if (!result) return [3 /*break*/, 4];
-                checking = false;
-                return [4 /*yield*/, createTempReservation_1.createTempReservation(request, currentStation)];
-            case 3:
-                reservSuccess = _a.sent();
-                stationSuccess = currentStation;
-                _a.label = 4;
-            case 4: return [3 /*break*/, 1];
-            case 5:
-                if (reservSuccess) {
-                    processManager.addReservResponseData(stationNumber, stationSuccess, reservSuccess);
-                    return [2 /*return*/, processManager];
-                }
-                else {
-                    throw new Error('No reservations available'); // TODO: more detailed error message, handle error
-                }
-                return [2 /*return*/];
-        }
+        return [2 /*return*/, googleMapsClient.directions(directionsRequest).asPromise()];
     });
 }); };
-//# sourceMappingURL=findReservation.js.map
+//# sourceMappingURL=fetchDirections.js.map
