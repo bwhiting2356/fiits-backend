@@ -13,6 +13,7 @@ import { bicyclingDirectionsRequest } from "./directions/bicyclingDirectionsRequ
 
 export const tripQuery = async (req): Promise<TripQueryResponse> => {
     const tripQueryRequest = parseTripQueryRequest(req);
+    console.log("\n\ntrip query request:\n\n", tripQueryRequest);
     const processManager = new ProcessManager(tripQueryRequest);
     return getStationData(processManager)
         .then(processManager => walking1MatrixRequest(tripQueryRequest, processManager))

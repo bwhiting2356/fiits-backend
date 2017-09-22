@@ -50,6 +50,7 @@ exports.tripQuery = function (req) { return __awaiter(_this, void 0, void 0, fun
     var tripQueryRequest, processManager;
     return __generator(this, function (_a) {
         tripQueryRequest = parseTripQueryRequest_1.parseTripQueryRequest(req);
+        console.log("\n\ntrip query request:\n\n", tripQueryRequest);
         processManager = new processManager_1.ProcessManager(tripQueryRequest);
         return [2 /*return*/, getStationData_1.getStationData(processManager)
                 .then(function (processManager) { return walking1MatrixRequest_1.walking1MatrixRequest(tripQueryRequest, processManager); })

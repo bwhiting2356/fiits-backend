@@ -80,7 +80,9 @@ router.post('/trip/', function (req, res) {
 router.post('/trip-query', function (req, res) {
     tripQuery_1.tripQuery(req).then(function (tripQueryResponse) {
         var response = res.send(tripQueryResponse);
-    }).catch(function (err) { return console.error(err); });
+    }).catch(function (err) {
+        res.send({ error: "Sorry, no reservations available at this time." });
+    });
 });
 module.exports = router;
 //# sourceMappingURL=index.js.map

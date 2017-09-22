@@ -12,8 +12,10 @@ app.use(cors());
 // app.set('view engine', 'html');
 
 const mainRoutes = require('./routes/index');
+const authRoutes = require('./routes/auth');
 
 app.use('/api', mainRoutes);
+app.use('/auth', authRoutes);
 
 // app.use((err, req, res, next) => {
 //     res.locals.error = err;

@@ -91,7 +91,9 @@ router.post('/trip/', (req, res) => {
 router.post('/trip-query', (req, res) => {
     tripQuery(req).then(tripQueryResponse => {
         let response = res.send(tripQueryResponse);
-    }).catch(err => console.error(err))
+    }).catch(err => {
+        res.send({ error: "Sorry, no reservations available at this time." })
+    })
 });
 
 module.exports = router;
