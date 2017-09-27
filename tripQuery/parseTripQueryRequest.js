@@ -9,6 +9,6 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.parseTripQueryRequest = function (req) {
-    return __assign({}, req.body.payload, { time: new Date(req.body.payload.time) });
+    return __assign({}, req.body, { time: new Date(req.body.time) });
 };
 //# sourceMappingURL=parseTripQueryRequest.js.map

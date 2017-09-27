@@ -58,7 +58,7 @@ exports.findReservation = function (stationNumber, processManager) { return __aw
                 result = testInvAgainstReq_1.testInvAgainstReq(reservations, currentStation.station, request);
                 if (!result) return [3 /*break*/, 4];
                 checking = false;
-                return [4 /*yield*/, createTempReservation_1.createTempReservation(request, currentStation)];
+                return [4 /*yield*/, createTempReservation_1.createTempReservation(request, currentStation, processManager)];
             case 3:
                 reservSuccess = _a.sent();
                 stationSuccess = currentStation;

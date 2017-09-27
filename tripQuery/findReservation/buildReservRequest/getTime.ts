@@ -11,23 +11,23 @@ export const getTime = (
     if (stationNumber === 1) {
         if (processManager.direction === processDirection.FORWARDS) {
             return addSeconds(
-                processManager.tripQueryResponse.departureTime,
+                processManager.tripData.departureTime,
                 currentStation.walking1Distance.duration
             );
         } else if (processManager.direction === processDirection.BACKWARDS) {
             return addSeconds(
-                processManager.tripQueryResponse.reservation2Time,
+                processManager.tripData.reservation2Time,
                 currentStation.bicyclingDistance.duration);
         }
     } else if (stationNumber === 2) {
         if (processManager.direction === processDirection.FORWARDS) {
             return addSeconds(
-                processManager.tripQueryResponse.reservation1Time,
+                processManager.tripData.reservation1Time,
                 currentStation.bicyclingDistance.duration
             );
         } else if (processManager.direction === processDirection.BACKWARDS) {
             return addSeconds(
-                processManager.tripQueryResponse.arrivalTime,
+                processManager.tripData.arrivalTime,
                 currentStation.walking2Distance.duration
             );
         }

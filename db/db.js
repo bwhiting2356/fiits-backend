@@ -1,6 +1,8 @@
 "use strict";
+var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Sequelize = require("sequelize");
+var bcrypt = require("bcrypt");
 exports.sequelize = new Sequelize('database', 'username', 'password', {
     host: 'localhost',
     dialect: 'sqlite',
@@ -11,8 +13,46 @@ var stationData_1 = require("../mock-data/stationData");
 var reservationStatus_1 = require("../shared/reservationStatus");
 var eventType_1 = require("../shared/eventType");
 exports.User = exports.sequelize.define('user', {
-    name: Sequelize.STRING
+    email: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false,
+        validate: {
+            isEmail: true,
+            notEmpty: true,
+            len: [1, 255]
+        },
+    },
+    password: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            len: [1, 255]
+        }
+    },
+    balance: {
+        type: Sequelize.DECIMAL,
+        defaultValue: 10.00
+    }
+}, {
+    instanceMethods: {
+        validPassword: function (password) {
+            return bcrypt.compareSync(password, _this.password);
+        }
+    }
 });
+exports.User.generateHash = function (password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+// User.prototype.validPassword = (password) => {
+//     console.log("\n\n")
+//     console.log(password)
+//     console.log("\n\n")
+//     console.log(this)
+//     console.log("\n\n")
+//     return bcrypt.compareSync(password, this.password);
+// };
 exports.Station = exports.sequelize.define('station', {
     address: {
         type: Sequelize.STRING,
@@ -55,42 +95,13 @@ exports.Reservation = exports.sequelize.define('reservation', {
         allowNull: false
     }
 });
-var Trip = exports.sequelize.define('trip', {
-    startLat: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
+exports.Trip = exports.sequelize.define('trip', {
+    tripData: {
+        type: Sequelize.JSON
     },
-    startLon: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
-    },
-    startTime: {
-        type: Sequelize.DATE(),
-        allowNull: true
-    },
-    reservation1: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    reservation2: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    endLat: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
-    },
-    endLon: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
-    },
-    endTime: {
-        type: Sequelize.DATE(),
-        allowNull: true
-    }
 });
-Trip.belongsTo(exports.User);
-exports.Reservation.belongsTo(exports.User);
+exports.Trip.belongsTo(exports.User);
+exports.Reservation.belongsTo(exports.Trip);
 exports.Reservation.belongsTo(exports.Station);
 exports.sequelize.sync({ force: true })
     .then(function () {

@@ -7,8 +7,8 @@ export const walking2DirectionsRequest = (
     processManager: ProcessManager
 ): Promise<ProcessManager> => {
     const walkingRequest2 = buildDirectionsRequest(
-        processManager.tripQueryResponse.station2Coords,
-        processManager.tripQueryResponse.destinationAddress,
+        processManager.tripData.station2Coords,
+        processManager.tripData.destinationAddress,
         TravelMode.walking);
     return fetchDirections(walkingRequest2)
         .then(res => {

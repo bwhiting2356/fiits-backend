@@ -1,4 +1,6 @@
 import * as Sequelize from 'sequelize';
+import * as bcrypt from 'bcrypt';
+
 export const sequelize = new Sequelize('database', 'username', 'password', {
     host: 'localhost',
     dialect: 'sqlite',
@@ -12,8 +14,48 @@ import { ReservationStatus } from '../shared/reservationStatus';
 import { EventType } from '../shared/eventType';
 
 export const User = sequelize.define('user', {
-    name: Sequelize.STRING
+    email: {
+        type: Sequelize.STRING,
+        unique: true,
+        allowNull: false,
+        validate: {
+            isEmail: true,
+            notEmpty: true,
+            len: [1,255]
+        },
+    },
+    password: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            len: [1,255]
+        }
+    },
+    balance: {
+        type: Sequelize.DECIMAL,
+        defaultValue: 10.00
+    }
+}, {
+    instanceMethods: {
+        validPassword: (password) => {
+            return bcrypt.compareSync(password, this.password);
+        }
+    }
 });
+
+User.generateHash = (password) => {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+
+// User.prototype.validPassword = (password) => {
+//     console.log("\n\n")
+//     console.log(password)
+//     console.log("\n\n")
+//     console.log(this)
+//     console.log("\n\n")
+//     return bcrypt.compareSync(password, this.password);
+// };
 
 export const Station = sequelize.define('station', {
     address: {
@@ -68,44 +110,15 @@ export const Reservation = sequelize.define('reservation', {
     }
 });
 
-const Trip = sequelize.define('trip', {
-    startLat: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
+export const Trip = sequelize.define('trip', {
+    tripData: {
+        type: Sequelize.JSON
     },
-    startLon: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
-    },
-    startTime: {
-        type: Sequelize.DATE(),
-        allowNull: true
-    },
-    reservation1: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    reservation2: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    endLat: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
-    },
-    endLon: {
-        type: Sequelize.FLOAT(),
-        allowNull: true
-    },
-    endTime: {
-        type: Sequelize.DATE(),
-        allowNull: true
-    }
 });
 
 Trip.belongsTo(User);
 
-Reservation.belongsTo(User);
+Reservation.belongsTo(Trip);
 Reservation.belongsTo(Station);
 
 sequelize.sync({ force: true })

@@ -29,7 +29,7 @@ export const findReservation = async (
 
         if (result) {
             checking = false;
-            reservSuccess = await createTempReservation(request, currentStation);
+            reservSuccess = await createTempReservation(request, currentStation, processManager);
             stationSuccess = currentStation;
         }
     }

@@ -3,7 +3,7 @@ import { TripQueryRequest } from "../../shared/tripQueryRequest";
 import { TimeTarget } from "../../shared/timeTarget";
 import { StationData } from "../../functions/stationData/StationData";
 import { StationDistancePair } from "../../shared/stationDistancePair";
-import { TripQueryResponse } from "../../shared/tripQueryResponse";
+import {TripData, TripQueryResponse} from "../../shared/tripQueryResponse";
 import { StationDistanceData } from "../stationData/stationDistanceData";
 import { compareWalking1Distance } from "../stationData/compareWalking1Distance";
 import { compareWalking2Distance } from "../stationData/compareWalking2Distance";
@@ -17,22 +17,22 @@ import { getBicyclingPrice } from "./getBicyclingPrice";
 export class ProcessManager {
     stationDistanceData: StationDistanceData[];
     direction: string;
-    tripQueryResponse: TripQueryResponse;
+    tripData: TripData;
 
-    constructor(private tripQueryRequest: TripQueryRequest) {
-        this.tripQueryResponse = {};
-        this.tripQueryResponse.originAddress = tripQueryRequest.originAddress;
-        this.tripQueryResponse.originCoords = tripQueryRequest.originCoords;
-        this.tripQueryResponse.destinationAddress = tripQueryRequest.destinationAddress;
-        this.tripQueryResponse.destinationCoords = tripQueryRequest.destinationCoords;
+    constructor(private tripQueryRequest: TripQueryRequest, public tripId: number) {
+        this.tripData = {};
+        this.tripData.originAddress = tripQueryRequest.originAddress;
+        this.tripData.originCoords = tripQueryRequest.originCoords;
+        this.tripData.destinationAddress = tripQueryRequest.destinationAddress;
+        this.tripData.destinationCoords = tripQueryRequest.destinationCoords;
 
         this.direction = tripQueryRequest.timeTarget === TimeTarget.ARRIVE_BY
             ? processDirection.BACKWARDS
             : processDirection.FORWARDS;
         if (this.direction === processDirection.FORWARDS) {
-            this.tripQueryResponse.departureTime = tripQueryRequest.time;
+            this.tripData.departureTime = tripQueryRequest.time;
         } else if (this.direction === processDirection.BACKWARDS) {
-            this.tripQueryResponse.arrivalTime = tripQueryRequest.time;
+            this.tripData.arrivalTime = tripQueryRequest.time;
         }
     }
 
@@ -96,51 +96,51 @@ export class ProcessManager {
 
     addReservResponseData(n: number, stationSuccess, reservSuccess) {
         if (n === 1) {
-            this.tripQueryResponse.station1Coords = stationToCoords(stationSuccess.station);
-            this.tripQueryResponse.station1Address = stationSuccess.station.address;
-            this.tripQueryResponse.walking1Distance = stationSuccess.walking1Distance;
-            this.tripQueryResponse.reservation1Time = reservSuccess.time;
-            this.tripQueryResponse.reservation1Price = reservSuccess.price;
+            this.tripData.station1Coords = stationToCoords(stationSuccess.station);
+            this.tripData.station1Address = stationSuccess.station.address;
+            this.tripData.walking1Distance = stationSuccess.walking1Distance;
+            this.tripData.reservation1Time = reservSuccess.time;
+            this.tripData.reservation1Price = reservSuccess.price;
             if (this.direction === processDirection.BACKWARDS) {
-                this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
-                this.tripQueryResponse.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripQueryResponse.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking2Distance);
+                this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
+                this.tripData.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
+                this.tripData.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking2Distance);
             }
 
         } else if (n === 2) {
-            this.tripQueryResponse.station2Coords = stationToCoords(stationSuccess.station);
-            this.tripQueryResponse.station2Address = stationSuccess.station.address;
-            this.tripQueryResponse.walking2Distance = stationSuccess.walking2Distance;
-            this.tripQueryResponse.reservation2Time = reservSuccess.time;
-            this.tripQueryResponse.reservation2Price = reservSuccess.price;
+            this.tripData.station2Coords = stationToCoords(stationSuccess.station);
+            this.tripData.station2Address = stationSuccess.station.address;
+            this.tripData.walking2Distance = stationSuccess.walking2Distance;
+            this.tripData.reservation2Time = reservSuccess.time;
+            this.tripData.reservation2Price = reservSuccess.price;
             if (this.direction === processDirection.FORWARDS) {
-                this.tripQueryResponse.bicyclingDistance = stationSuccess.bicyclingDistance;
-                this.tripQueryResponse.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripQueryResponse.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+                this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
+                this.tripData.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
+                this.tripData.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
             }
         }
     }
 
     addWalking1Directions(res) {
         const leg = res.json.routes[0].legs[0];
-        this.tripQueryResponse.originAddress = leg.start_address;
-        this.tripQueryResponse.originCoords = leg.start_location;
+        this.tripData.originAddress = leg.start_address;
+        this.tripData.originCoords = leg.start_location;
         const steps = leg.steps;
-        this.tripQueryResponse.walking1Points = convertStepsToCoords(steps);
+        this.tripData.walking1Points = convertStepsToCoords(steps);
     }
 
     addWalking2Directions(res) {
         const leg = res.json.routes[0].legs[0];
-        this.tripQueryResponse.destinationAddress = leg.end_address;
-        this.tripQueryResponse.destinationCoords = leg.end_location;
+        this.tripData.destinationAddress = leg.end_address;
+        this.tripData.destinationCoords = leg.end_location;
         const steps = leg.steps;
-        this.tripQueryResponse.walking2Points = convertStepsToCoords(steps);
+        this.tripData.walking2Points = convertStepsToCoords(steps);
     }
 
     addBicyclingDirections(res) {
         const leg = res.json.routes[0].legs[0];
         const steps = leg.steps;
-        this.tripQueryResponse.bicyclingPoints = convertStepsToCoords(steps);
+        this.tripData.bicyclingPoints = convertStepsToCoords(steps);
     }
 
     getStationArrivalTime(time: Date, stationDistancePair: StationDistancePair): Date {
@@ -163,8 +163,8 @@ export class ProcessManager {
 
     get bicyclingOriginStation(): Coords {
         return this.direction === processDirection.FORWARDS
-            ? this.tripQueryResponse.station1Coords
-            : this.tripQueryResponse.station2Coords;
+            ? this.tripData.station1Coords
+            : this.tripData.station2Coords;
     }
 }
 

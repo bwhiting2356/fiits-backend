@@ -38,13 +38,14 @@ var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
 var db_1 = require("../../db/db");
 var reservationStatus_1 = require("../../shared/reservationStatus");
-exports.createTempReservation = function (request, currentStation) { return __awaiter(_this, void 0, void 0, function () {
+exports.createTempReservation = function (request, currentStation, processManager) { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         return [2 /*return*/, db_1.Reservation.create({
                 time: request.requestTime,
                 type: request.type,
                 status: reservationStatus_1.ReservationStatus.temporary,
                 stationId: currentStation.station.id,
+                tripId: processManager.tripId,
                 price: 0.50 // TODO: actually compute the price
             })];
     });

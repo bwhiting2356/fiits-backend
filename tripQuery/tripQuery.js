@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
+var db_1 = require("../db/db");
 var getStationData_1 = require("./stationData/getStationData");
 var findReservation_1 = require("./findReservation/findReservation");
 var processManager_1 = require("./processManager/processManager");
@@ -47,21 +48,30 @@ var walking1DirectionsRequest_1 = require("./directions/walking1DirectionsReques
 var walking2DirectionsRequest_1 = require("./directions/walking2DirectionsRequest");
 var bicyclingDirectionsRequest_1 = require("./directions/bicyclingDirectionsRequest");
 exports.tripQuery = function (req) { return __awaiter(_this, void 0, void 0, function () {
-    var tripQueryRequest, processManager;
+    var tripQueryRequest, newTrip, processManager, tripData;
     return __generator(this, function (_a) {
-        tripQueryRequest = parseTripQueryRequest_1.parseTripQueryRequest(req);
-        console.log("\n\ntrip query request:\n\n", tripQueryRequest);
-        processManager = new processManager_1.ProcessManager(tripQueryRequest);
-        return [2 /*return*/, getStationData_1.getStationData(processManager)
-                .then(function (processManager) { return walking1MatrixRequest_1.walking1MatrixRequest(tripQueryRequest, processManager); })
-                .then(function (processManager) { return walking2MatrixRequest_1.walking2MatrixRequest(tripQueryRequest, processManager); })
-                .then(function (processManager) { return findReservation_1.findReservation(processManager.firstStation, processManager); })
-                .then(function (processManager) { return walking1DirectionsRequest_1.walking1DirectionsRequest(processManager); })
-                .then(function (processManager) { return bicyclingMatrixRequest_1.bicyclingMatrixRequest(processManager); })
-                .then(function (processManager) { return findReservation_1.findReservation(processManager.secondStation, processManager); })
-                .then(function (processManager) { return walking2DirectionsRequest_1.walking2DirectionsRequest(processManager); })
-                .then(function (processManager) { return bicyclingDirectionsRequest_1.bicyclingDirectionsRequest(processManager); })
-                .then(function (processManager) { return processManager.tripQueryResponse; })];
+        switch (_a.label) {
+            case 0:
+                tripQueryRequest = parseTripQueryRequest_1.parseTripQueryRequest(req);
+                return [4 /*yield*/, db_1.Trip.create({})];
+            case 1:
+                newTrip = _a.sent();
+                processManager = new processManager_1.ProcessManager(tripQueryRequest, newTrip.id);
+                return [4 /*yield*/, getStationData_1.getStationData(processManager)
+                        .then(function (processManager) { return walking1MatrixRequest_1.walking1MatrixRequest(tripQueryRequest, processManager); })
+                        .then(function (processManager) { return walking2MatrixRequest_1.walking2MatrixRequest(tripQueryRequest, processManager); })
+                        .then(function (processManager) { return findReservation_1.findReservation(processManager.firstStation, processManager); })
+                        .then(function (processManager) { return walking1DirectionsRequest_1.walking1DirectionsRequest(processManager); })
+                        .then(function (processManager) { return bicyclingMatrixRequest_1.bicyclingMatrixRequest(processManager); })
+                        .then(function (processManager) { return findReservation_1.findReservation(processManager.secondStation, processManager); })
+                        .then(function (processManager) { return walking2DirectionsRequest_1.walking2DirectionsRequest(processManager); })
+                        .then(function (processManager) { return bicyclingDirectionsRequest_1.bicyclingDirectionsRequest(processManager); })
+                        .then(function (processManager) { return processManager.tripData; })];
+            case 2:
+                tripData = _a.sent();
+                return [4 /*yield*/, newTrip.update({ tripData: tripData }).then(function (trip) { return ({ tripId: trip.id, tripData: trip.tripData }); })];
+            case 3: return [2 /*return*/, _a.sent()];
+        }
     });
 }); };
 //# sourceMappingURL=tripQuery.js.map

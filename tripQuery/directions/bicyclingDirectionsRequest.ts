@@ -7,8 +7,8 @@ export const bicyclingDirectionsRequest = (
     processManager: ProcessManager
 ): Promise<ProcessManager> => {
     const bicyclingRequest = buildDirectionsRequest(
-        processManager.tripQueryResponse.station1Coords,
-        processManager.tripQueryResponse.station2Coords,
+        processManager.tripData.station1Coords,
+        processManager.tripData.station2Coords,
         TravelMode.bicycling);
     return fetchDirections(bicyclingRequest)
         .then(res => {

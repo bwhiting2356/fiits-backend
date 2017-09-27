@@ -1,9 +1,40 @@
 import * as express from 'express';
-import {TripQueryRequest} from "../shared/tripQueryRequest";
-import {tripQuery} from "../tripQuery/tripQuery";
-const router = express.Router();
+import * as checkJwt from 'express-jwt';
+import { secret } from "../config/main";
+import { tripQuery } from "../tripQuery/tripQuery";
+import { User, Station, Reservation, Trip } from "../db/db";
 
-const { User, Station, Reservation, Trip } = require('../db/db');
+export const router = express.Router();
+
+router.post('/trip-query', (req, res) => {
+    tripQuery(req)
+        .then(trip => {
+            res.send(trip)
+        })
+        .catch(err => {
+            res.send({ error: "Sorry, no reservations available at this time." })
+        })
+});
+
+router.use(checkJwt({ secret }));
+
+router.post('/confirm-book', (req, res) => {
+    const tripId = req.body.tripId;
+    const userId = req.user;
+    Trip.findById(tripId)
+        .then(trip => trip.update({ userId }))
+        .then(() => {
+            res.json({message: 'success'})
+        })
+        .catch(err => res.json({error: err }))
+});
+
+router.get('trips', (req, res) => {
+    const userId = req.user;
+    Trip.findAll({where: { userId }}).then(trips => {
+        res.json(trips)
+    })
+});
 
 router.get('/users', (req, res) => {
     User.findAll().then(users => {
@@ -44,35 +75,11 @@ router.get('/reservation/:id', (req, res) => {
     });
 });
 
-// router.post('/reservation/', (req, res) => {
-//     const { userId, stationId } = req.body;
-//     let station, result;
-//     Station.findById(stationId).then(s => {
-//         station = s;
-//     });
-//     Reservation.findAll({
-//         where: {
-//             stationId: stationId,
-//             status: 'pending'
-//         }
-//     }).then(reservations => {
-//         result = testInventory(reservations, station, req.body);
-//     });
-//     if (result) {
-//         Reservation.create().then(reservation => {
-//             res.json(reservation)
-//         });
-//     } else {
-//         res.json({
-//             response: "Can't create a reservation, sorry"
-//         });
-//     }
-// });
-
 router.get('/trips', (req, res) => {
     Trip.findAll().then(trips => {
         res.json(trips);
-    });
+    })
+        .catch(err => console.log("\n\n", err))
 });
 
 router.get('/trip/:id', (req, res) => {
@@ -88,12 +95,11 @@ router.post('/trip/', (req, res) => {
     });
 });
 
-router.post('/trip-query', (req, res) => {
-    tripQuery(req).then(tripQueryResponse => {
-        let response = res.send(tripQueryResponse);
-    }).catch(err => {
-        res.send({ error: "Sorry, no reservations available at this time." })
-    })
+router.use((err, req, res, next) => {
+    if (err.name === 'Unauthorized Error') {
+        console.log("\n\nI'm inside here\n\n")
+        res.json({error: err.message })
+    }
 });
 
-module.exports = router;
+
