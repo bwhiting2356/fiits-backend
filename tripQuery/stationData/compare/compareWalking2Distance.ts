@@ -1,4 +1,4 @@
-import { StationDistanceData } from "./stationDistanceData";
+import { StationDistanceData } from "../stationDistanceData";
 
 export const compareWalking2Distance = (
     a: StationDistanceData,

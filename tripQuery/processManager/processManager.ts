@@ -1,18 +1,19 @@
 import { processDirection} from "./processDirection"
 import { TripQueryRequest } from "../../shared/tripQueryRequest";
 import { TimeTarget } from "../../shared/timeTarget";
-import { StationData } from "../../functions/stationData/StationData";
+
 import { StationDistancePair } from "../../shared/stationDistancePair";
-import {TripData, TripQueryResponse} from "../../shared/tripQueryResponse";
+import { TripData } from "../../shared/tripData";
 import { StationDistanceData } from "../stationData/stationDistanceData";
-import { compareWalking1Distance } from "../stationData/compareWalking1Distance";
-import { compareWalking2Distance } from "../stationData/compareWalking2Distance";
-import { compareBicyclingDistance } from "../stationData/compareBicyclingDistance";
+import { compareWalking1Distance } from "../stationData/compare/compareWalking1Distance";
+import { compareWalking2Distance } from "../stationData/compare/compareWalking2Distance";
+import { compareBicyclingDistance } from "../stationData/compare/compareBicyclingDistance";
 import { stationToCoords } from "../stationData/stationToCoords";
 import { Coords } from "../../shared/coords";
 import { addSeconds } from "../../shared/timeHelpers/addSeconds";
 import { subtractSeconds } from "../../shared/timeHelpers/subtractSeconds";
-import { getBicyclingPrice } from "./getBicyclingPrice";
+import { getBicyclingPrice } from "./getBicyclingPrice/getBicyclingPrice";
+import {StationData} from "../stationData/stationData";
 
 export class ProcessManager {
     stationDistanceData: StationDistanceData[];
@@ -94,7 +95,7 @@ export class ProcessManager {
         }
     };
 
-    addReservResponseData(n: number, stationSuccess, reservSuccess) {
+    addReservResponseData(n: number, stationSuccess: StationDistanceData, reservSuccess) {
         if (n === 1) {
             this.tripData.station1Coords = stationToCoords(stationSuccess.station);
             this.tripData.station1Address = stationSuccess.station.address;
@@ -104,7 +105,7 @@ export class ProcessManager {
             if (this.direction === processDirection.BACKWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking2Distance);
+                this.tripData.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking2Distance.duration);
             }
 
         } else if (n === 2) {
@@ -116,7 +117,7 @@ export class ProcessManager {
             if (this.direction === processDirection.FORWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+                this.tripData.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
             }
         }
     }

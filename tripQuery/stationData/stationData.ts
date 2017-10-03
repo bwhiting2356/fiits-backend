@@ -1,6 +1,6 @@
 export interface StationData {
     id: number,
-    address: String,
+    address: string,
     lat: number,
     lng: number,
     currentInv: number,

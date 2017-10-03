@@ -14,6 +14,9 @@ router.post('/trip-query', (req, res) => {
         .catch(err => {
             res.send({ error: "Sorry, no reservations available at this time." })
         })
+
+    // TODO: add a property to the trip if it's still temporary and will expire
+    // TODO: add UI showing the countdown of the expiration time
 });
 
 router.use(checkJwt({ secret }));

@@ -17,7 +17,7 @@ export const findReservation = async (
 
     let checking = true;
     let reservSuccess;
-    let stationSuccess;
+    let stationSuccess: StationDistanceData;
     while (checking && stationDistanceData.length) {
         const currentStation = stationDistanceData.shift();
         // TODO: don't remove item from array, just reference and increment a pointer

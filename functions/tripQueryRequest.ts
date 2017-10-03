@@ -116,7 +116,6 @@ export const tripQueryRequest = async (tripQueryRequest: TripQueryRequest) => {
                         TravelMode.bicycling)
                         .then(directionsResponse => {
                             processManager.bicyclingPoints = getPointsFromDirections(directionsResponse);
-                            console.log(processManager);
                             return processManager;
                         });
                 }).then(tripQueryResponse => tripQueryResponse);

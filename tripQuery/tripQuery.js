@@ -66,7 +66,10 @@ exports.tripQuery = function (req) { return __awaiter(_this, void 0, void 0, fun
                         .then(function (processManager) { return findReservation_1.findReservation(processManager.secondStation, processManager); })
                         .then(function (processManager) { return walking2DirectionsRequest_1.walking2DirectionsRequest(processManager); })
                         .then(function (processManager) { return bicyclingDirectionsRequest_1.bicyclingDirectionsRequest(processManager); })
-                        .then(function (processManager) { return processManager.tripData; })];
+                        .then(function (processManager) {
+                        console.log(processManager.tripData);
+                        return processManager.tripData;
+                    })];
             case 2:
                 tripData = _a.sent();
                 return [4 /*yield*/, newTrip.update({ tripData: tripData }).then(function (trip) { return ({ tripId: trip.id, tripData: trip.tripData }); })];

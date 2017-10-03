@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var processDirection_1 = require("./processDirection");
 var timeTarget_1 = require("../../shared/timeTarget");
-var compareWalking1Distance_1 = require("../stationData/compareWalking1Distance");
-var compareWalking2Distance_1 = require("../stationData/compareWalking2Distance");
-var compareBicyclingDistance_1 = require("../stationData/compareBicyclingDistance");
+var compareWalking1Distance_1 = require("../stationData/compare/compareWalking1Distance");
+var compareWalking2Distance_1 = require("../stationData/compare/compareWalking2Distance");
+var compareBicyclingDistance_1 = require("../stationData/compare/compareBicyclingDistance");
 var stationToCoords_1 = require("../stationData/stationToCoords");
 var addSeconds_1 = require("../../shared/timeHelpers/addSeconds");
 var subtractSeconds_1 = require("../../shared/timeHelpers/subtractSeconds");
-var getBicyclingPrice_1 = require("./getBicyclingPrice");
+var getBicyclingPrice_1 = require("./getBicyclingPrice/getBicyclingPrice");
 var ProcessManager = (function () {
     function ProcessManager(tripQueryRequest, tripId) {
         this.tripQueryRequest = tripQueryRequest;
@@ -100,7 +100,7 @@ var ProcessManager = (function () {
             if (this.direction === processDirection_1.processDirection.BACKWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice_1.getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = addSeconds_1.addSeconds(reservSuccess.time, stationSuccess.walking2Distance);
+                this.tripData.arrivalTime = subtractSeconds_1.subtractSeconds(reservSuccess.time, stationSuccess.walking2Distance.duration);
             }
         }
         else if (n === 2) {
@@ -112,7 +112,7 @@ var ProcessManager = (function () {
             if (this.direction === processDirection_1.processDirection.FORWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice_1.getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = subtractSeconds_1.subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+                this.tripData.arrivalTime = addSeconds_1.addSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
             }
         }
     };

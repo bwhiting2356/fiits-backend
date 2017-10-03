@@ -111,7 +111,6 @@ exports.tripQueryRequest = function (tripQueryRequest) { return __awaiter(_this,
                         return fetchDirections_1.fetchDirections(processManager.station1, processManager.station2, travelMode_1.TravelMode.bicycling)
                             .then(function (directionsResponse) {
                             processManager.bicyclingPoints = getPointsFromDirections_1.getPointsFromDirections(directionsResponse);
-                            console.log(processManager);
                             return processManager;
                         });
                     }).then(function (tripQueryResponse) { return tripQueryResponse; });

@@ -14,6 +14,8 @@ exports.router.post('/trip-query', function (req, res) {
         .catch(function (err) {
         res.send({ error: "Sorry, no reservations available at this time." });
     });
+    // TODO: add a property to the trip if it's still temporary and will expire
+    // TODO: add UI showing the countdown of the expiration time
 });
 exports.router.use(checkJwt({ secret: main_1.secret }));
 exports.router.post('/confirm-book', function (req, res) {

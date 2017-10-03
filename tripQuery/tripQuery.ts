@@ -26,6 +26,9 @@ export const tripQuery = async (req): Promise<TripQueryResponse> => {
         .then(processManager => findReservation(processManager.secondStation, processManager))
         .then(processManager => walking2DirectionsRequest(processManager))
         .then(processManager => bicyclingDirectionsRequest(processManager))
-        .then(processManager => processManager.tripData);
+        .then(processManager => {
+            console.log(processManager.tripData)
+            return processManager.tripData
+        });
     return await newTrip.update({ tripData }).then(trip => ({ tripId: trip.id, tripData: trip.tripData }));
 };

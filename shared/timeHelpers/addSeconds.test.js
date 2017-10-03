@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
-var addSeconds_1 = require("../shared/timeHelpers/addSeconds");
+var addSeconds_1 = require("./addSeconds");
 describe('test addSeconds', function () {
     it('should be ok', function () {
         var date = new Date("2017-09-14T13:09:28+00:00");
