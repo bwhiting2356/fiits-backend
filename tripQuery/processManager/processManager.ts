@@ -105,7 +105,7 @@ export class ProcessManager {
             if (this.direction === processDirection.BACKWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking2Distance.duration);
+                this.tripData.arrivalTime = subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
             }
 
         } else if (n === 2) {
@@ -117,7 +117,7 @@ export class ProcessManager {
             if (this.direction === processDirection.FORWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+                this.tripData.arrivalTime = addSeconds(reservSuccess.time, stationSuccess.walking2Distance.duration);
             }
         }
     }

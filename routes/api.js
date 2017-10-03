@@ -17,6 +17,9 @@ exports.router.post('/trip-query', function (req, res) {
     // TODO: add a property to the trip if it's still temporary and will expire
     // TODO: add UI showing the countdown of the expiration time
 });
+exports.router.post('/coords-to-cache', function (req, res) {
+    res.send('hi');
+});
 exports.router.use(checkJwt({ secret: main_1.secret }));
 exports.router.post('/confirm-book', function (req, res) {
     var tripId = req.body.tripId;

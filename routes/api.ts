@@ -19,6 +19,10 @@ router.post('/trip-query', (req, res) => {
     // TODO: add UI showing the countdown of the expiration time
 });
 
+router.post('/coords-to-cache', (req, res) => {
+    res.send('hi');
+});
+
 router.use(checkJwt({ secret }));
 
 router.post('/confirm-book', (req, res) => {

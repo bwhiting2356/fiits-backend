@@ -100,7 +100,7 @@ var ProcessManager = (function () {
             if (this.direction === processDirection_1.processDirection.BACKWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice_1.getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = subtractSeconds_1.subtractSeconds(reservSuccess.time, stationSuccess.walking2Distance.duration);
+                this.tripData.arrivalTime = subtractSeconds_1.subtractSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
             }
         }
         else if (n === 2) {
@@ -112,7 +112,7 @@ var ProcessManager = (function () {
             if (this.direction === processDirection_1.processDirection.FORWARDS) {
                 this.tripData.bicyclingDistance = stationSuccess.bicyclingDistance;
                 this.tripData.bicyclingPrice = getBicyclingPrice_1.getBicyclingPrice(stationSuccess.bicyclingDistance.duration);
-                this.tripData.arrivalTime = addSeconds_1.addSeconds(reservSuccess.time, stationSuccess.walking1Distance.duration);
+                this.tripData.arrivalTime = addSeconds_1.addSeconds(reservSuccess.time, stationSuccess.walking2Distance.duration);
             }
         }
     };
