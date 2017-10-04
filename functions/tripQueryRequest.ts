@@ -1,9 +1,9 @@
 import { TripQueryRequest } from "../shared/tripQueryRequest";
-import { ProcessManager } from "../tripQuery/processManager/processManager";
+import { ProcessManager } from "../routes/api/tripQuery/processManager/processManager";
 
 import { getStationDataFromDB } from "./getStationDataFromDB";
 import { fetchDistanceMatrix } from "./fetchDistanceMatrix";
-import { processDirection } from "../tripQuery/processManager/processDirection";
+import { processDirection } from "../routes/api/tripQuery/processManager/processDirection";
 import { getDataValuesFromStations } from "./getDataValuesFromStations";
 import { findFirstReservation } from "./findFirstReservation";
 import { TravelMode } from "../shared/travelMode";

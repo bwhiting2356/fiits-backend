@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 
-import { ProcessManager } from '../tripQuery/processManager/processManager';
+import { ProcessManager } from '../routes/api/tripQuery/processManager/processManager';
 import { TripQueryRequest} from "../shared/tripQueryRequest";
-import { processDirection } from "../tripQuery/processManager/processDirection"
+import { processDirection } from "../routes/api/tripQuery/processManager/processDirection"
 import { TimeTarget } from "../shared/timeTarget";
 import { StationDistancePair } from "../shared/stationDistancePair";
 

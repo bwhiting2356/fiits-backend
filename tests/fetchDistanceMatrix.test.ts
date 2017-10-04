@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { fetchDistanceMatrix } from "../functions/fetchDistanceMatrix";
-import { DistanceMatrixRequest } from "../tripQuery/distanceMatrix/distanceMatrixRequest";
+import { DistanceMatrixRequest } from "../routes/api/distanceMatrix/distanceMatrixRequest";
 
 describe('test fetchDistanceMatrix', () => {
     let distanceMatrixRequest: DistanceMatrixRequest = {

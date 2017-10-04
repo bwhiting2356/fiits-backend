@@ -36,10 +36,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var processManager_1 = require("../tripQuery/processManager/processManager");
+var processManager_1 = require("../routes/api/tripQuery/processManager/processManager");
 var getStationDataFromDB_1 = require("./getStationDataFromDB");
 var fetchDistanceMatrix_1 = require("./fetchDistanceMatrix");
-var processDirection_1 = require("../tripQuery/processManager/processDirection");
+var processDirection_1 = require("../routes/api/tripQuery/processManager/processDirection");
 var getDataValuesFromStations_1 = require("./getDataValuesFromStations");
 var findFirstReservation_1 = require("./findFirstReservation");
 var travelMode_1 = require("../shared/travelMode");

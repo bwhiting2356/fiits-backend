@@ -1,5 +1,5 @@
 import { Coords } from "../shared/coords";
-import { DistanceMatrixRequest } from "../tripQuery/distanceMatrix/distanceMatrixRequest";
+import { DistanceMatrixRequest } from "../routes/api/distanceMatrix/distanceMatrixRequest";
 import {StationDataManager} from "./stationData/stationDataManager";
 import {mapStationDataToCoords} from "./mapStationDataToCoords";
 

@@ -1,6 +1,6 @@
 import { expect, assert } from 'chai';
 import { findFirstReservation } from "../functions/findFirstReservation";
-import { ProcessManager } from "../tripQuery/processManager/processManager";
+import { ProcessManager } from "../routes/api/tripQuery/processManager/processManager";
 import { TripQueryRequest } from "../shared/tripQueryRequest";
 import { TimeTarget } from "../shared/timeTarget";
 import {StationDistancePair} from "../shared/stationDistancePair";

@@ -2,8 +2,8 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
 import { port } from "./config/main";
-import { router as apiRoutes } from './routes/api';
-import { router as authRoutes } from './routes/auth';
+import { router as apiRoutes } from './routes/api/api';
+import { router as authRoutes } from './routes/auth/auth';
 
 export const app = express();
 

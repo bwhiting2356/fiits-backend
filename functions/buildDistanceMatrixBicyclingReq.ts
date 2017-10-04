@@ -2,7 +2,7 @@
 
 import { StationData } from "./stationData/StationData";
 import {Coords} from "../shared/coords";
-import {DistanceMatrixRequest} from "../tripQuery/distanceMatrix/distanceMatrixRequest";
+import {DistanceMatrixRequest} from "../routes/api/distanceMatrix/distanceMatrixRequest";
 
 export const buildDistanceMatrixBicyclingReq = (
     coords: Coords[],

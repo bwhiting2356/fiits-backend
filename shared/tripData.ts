@@ -1,5 +1,5 @@
 import { Coords } from './coords';
-import { DistanceData } from "../tripQuery/stationData/distanceData";
+import { DistanceData } from "../routes/api/stationData/distanceData";
 
 export interface TripData {
     originAddress?: string;

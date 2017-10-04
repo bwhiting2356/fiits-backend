@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var chai_1 = require("chai");
-var processManager_1 = require("../tripQuery/processManager/processManager");
-var processDirection_1 = require("../tripQuery/processManager/processDirection");
+var processManager_1 = require("../routes/api/tripQuery/processManager/processManager");
+var processDirection_1 = require("../routes/api/tripQuery/processManager/processDirection");
 var timeTarget_1 = require("../shared/timeTarget");
 describe('test ProcessManager', function () {
     var tqr;

@@ -121,6 +121,18 @@ Trip.belongsTo(User);
 Reservation.belongsTo(Trip);
 Reservation.belongsTo(Station);
 
+export const DistanceMatrixCache = sequelize.define('distance-matrix-cache', {
+    query: {
+        type: Sequelize.JSON,
+        allowNull: false,
+        unique: true
+    },
+    result: {
+        type: Sequelize.JSON,
+        allowNull: false
+    }
+});
+
 sequelize.sync({ force: true })
     .then(() => {
         Station.bulkCreate(stationDataList);

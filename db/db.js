@@ -103,6 +103,17 @@ exports.Trip = exports.sequelize.define('trip', {
 exports.Trip.belongsTo(exports.User);
 exports.Reservation.belongsTo(exports.Trip);
 exports.Reservation.belongsTo(exports.Station);
+exports.DistanceMatrixCache = exports.sequelize.define('distance-matrix-cache', {
+    query: {
+        type: Sequelize.JSON,
+        allowNull: false,
+        unique: true
+    },
+    result: {
+        type: Sequelize.JSON,
+        allowNull: false
+    }
+});
 exports.sequelize.sync({ force: true })
     .then(function () {
     exports.Station.bulkCreate(stationData_1.stationDataList);
