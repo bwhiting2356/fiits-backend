@@ -2,170 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a426350-74af-4c0f-a24e-7cb8dfda3a4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/cacheCoords/cacheCoords.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/api/cacheCoords/mergeResultsWithIds.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/api.js" afterPath="$PROJECT_DIR$/routes/api/api.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/api.js.map" afterPath="$PROJECT_DIR$/routes/api/api.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/api.ts" afterPath="$PROJECT_DIR$/routes/api/api.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/auth.js" afterPath="$PROJECT_DIR$/routes/auth/auth.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/auth.js.map" afterPath="$PROJECT_DIR$/routes/auth/auth.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/routes/auth.ts" afterPath="$PROJECT_DIR$/routes/auth/auth.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/bicyclingDirectionsRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/bicyclingDirectionsRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/bicyclingDirectionsRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/bicyclingDirectionsRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/bicyclingDirectionsRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/bicyclingDirectionsRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/buildDirectionsRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/buildDirectionsRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/buildDirectionsRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/buildDirectionsRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/buildDirectionsRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/buildDirectionsRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/directionsRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/directionsRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/directionsRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/directionsRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/directionsRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/directionsRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/fetchDirections.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/fetchDirections.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/fetchDirections.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/fetchDirections.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/fetchDirections.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/fetchDirections.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/walking1DirectionsRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/walking1DirectionsRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/walking1DirectionsRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/walking1DirectionsRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/walking1DirectionsRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/walking1DirectionsRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/walking2DirectionsRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/walking2DirectionsRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/walking2DirectionsRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/walking2DirectionsRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/directions/walking2DirectionsRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/directions/walking2DirectionsRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/bicyclingMatrixRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/bicyclingMatrixRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/bicyclingMatrixRequest.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/bicyclingMatrixRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/buildDistanceMatrixRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/buildDistanceMatrixRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/buildDistanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/buildDistanceMatrixRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/distanceMatrixRequest.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/distanceMatrixRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/distanceMatrixRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/distanceMatrixRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/distanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/distanceMatrixRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/fetchDistanceMatrix.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/fetchDistanceMatrix.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/fetchDistanceMatrix.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/fetchDistanceMatrix.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/originAddressOrCoords.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/originAddressOrCoords.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/originAddressOrCoords.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/originAddressOrCoords.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/originAddressOrCoords.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/originAddressOrCoords.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/walking1MatrixRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/walking1MatrixRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking1MatrixRequest.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/walking1MatrixRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.js" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/walking2MatrixRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/walking2MatrixRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/distanceMatrix/walking2MatrixRequest.ts" afterPath="$PROJECT_DIR$/routes/api/distanceMatrix/walking2MatrixRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/buildReservRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/buildReservRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/buildReservRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/buildReservRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/buildReservRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/buildReservRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/getTime.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/getTime.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getTime.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/getTime.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/getType.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/getType.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/buildReservRequest/getType.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/buildReservRequest/getType.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/createTempReservation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/createTempReservation.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/createTempReservation.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/createTempReservation.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findAllReservationsAtStation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findAllReservationsAtStation.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findAllReservationsAtStation.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findAllReservationsAtStation.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/findReservation/findReservation.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/parseTripQueryRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/parseTripQueryRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/parseTripQueryRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/parseTripQueryRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/parseTripQueryRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/parseTripQueryRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/constants.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/constants.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/constants.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/constants.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/constants.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/constants.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.test.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.test.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.test.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getBicyclingPrice.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getIncrements.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getIncrements.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getIncrements.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getIncrements.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getIncrements.test.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getIncrements.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getIncrements.test.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getIncrements.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getIncrements.test.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getIncrements.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getIncrements.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getIncrements.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.test.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.test.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.test.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/getMinutesFromSeconds.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.test.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.test.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.test.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/getBicyclingPrice/multiplyIncrementsByPrice.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/processDirection.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/processDirection.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/processDirection.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/processDirection.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/processDirection.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/processDirection.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/processManager.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/processManager.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/processManager.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/processManager.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/processManager/processManager.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/processManager/processManager.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareBicyclingDistance.js" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareBicyclingDistance.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareBicyclingDistance.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareBicyclingDistance.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareBicyclingDistance.test.js" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareBicyclingDistance.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareBicyclingDistance.test.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareBicyclingDistance.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareBicyclingDistance.test.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareBicyclingDistance.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareBicyclingDistance.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareBicyclingDistance.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking1Distance.js" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking1Distance.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking1Distance.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking1Distance.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking1Distance.test.js" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking1Distance.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking1Distance.test.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking1Distance.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking1Distance.test.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking1Distance.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking1Distance.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking1Distance.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking2Distance.js" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking2Distance.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking2Distance.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking2Distance.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking2Distance.test.js" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking2Distance.test.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking2Distance.test.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking2Distance.test.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking2Distance.test.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking2Distance.test.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/compare/compareWalking2Distance.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/compare/compareWalking2Distance.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/distanceData.js" afterPath="$PROJECT_DIR$/routes/api/stationData/distanceData.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/distanceData.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/distanceData.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/distanceData.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/distanceData.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/getStationData.js" afterPath="$PROJECT_DIR$/routes/api/stationData/getStationData.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/getStationData.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/getStationData.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/getStationData.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/getStationData.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.js" afterPath="$PROJECT_DIR$/routes/api/stationData/mapToDataValues.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/mapToDataValues.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/mapToDataValues.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/mapToDataValues.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationData.js" afterPath="$PROJECT_DIR$/routes/api/stationData/stationData.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationData.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/stationData.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationData.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/stationData.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.js" afterPath="$PROJECT_DIR$/routes/api/stationData/stationDistanceData.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/stationDistanceData.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceData.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/stationDistanceData.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceDataToCoords.js" afterPath="$PROJECT_DIR$/routes/api/stationData/stationDistanceDataToCoords.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceDataToCoords.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/stationDistanceDataToCoords.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationDistanceDataToCoords.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/stationDistanceDataToCoords.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.js" afterPath="$PROJECT_DIR$/routes/api/stationData/stationToCoords.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.js.map" afterPath="$PROJECT_DIR$/routes/api/stationData/stationToCoords.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/stationData/stationToCoords.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/stationToCoords.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/tripQuery.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/tripQuery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/tripQuery.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/tripQuery.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tripQuery/tripQuery.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/tripQuery.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite" afterPath="$PROJECT_DIR$/db.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.ts" afterPath="$PROJECT_DIR$/app.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.js" afterPath="$PROJECT_DIR$/db/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.js.map" afterPath="$PROJECT_DIR$/db/db.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/db.ts" afterPath="$PROJECT_DIR$/db/db.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts" afterPath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts" afterPath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts" afterPath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/fetchDistanceMatrix.ts" afterPath="$PROJECT_DIR$/functions/fetchDistanceMatrix.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.js" afterPath="$PROJECT_DIR$/functions/tripQueryRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.js.map" afterPath="$PROJECT_DIR$/functions/tripQueryRequest.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.ts" afterPath="$PROJECT_DIR$/functions/tripQueryRequest.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/tripData.ts" afterPath="$PROJECT_DIR$/shared/tripData.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/fetchDistanceMatrix.test.ts" afterPath="$PROJECT_DIR$/tests/fetchDistanceMatrix.test.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/findFirstReservation.test.js" afterPath="$PROJECT_DIR$/tests/findFirstReservation.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/findFirstReservation.test.js.map" afterPath="$PROJECT_DIR$/tests/findFirstReservation.test.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/findFirstReservation.test.ts" afterPath="$PROJECT_DIR$/tests/findFirstReservation.test.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/processManager.test.js" afterPath="$PROJECT_DIR$/tests/processManager.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/processManager.test.js.map" afterPath="$PROJECT_DIR$/tests/processManager.test.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/processManager.test.ts" afterPath="$PROJECT_DIR$/tests/processManager.test.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -545,12 +382,12 @@
       <workItem from="1506059857216" duration="2608000" />
       <workItem from="1506111013299" duration="40249000" />
       <workItem from="1506820544607" duration="12289000" />
-      <workItem from="1507071566506" duration="6552000" />
+      <workItem from="1507071566506" duration="6747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194846000" />
+    <option name="totallyTimeSpent" value="195041000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,7 +409,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31524926" sideWeight="0.49665552" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31524926" sideWeight="0.49665552" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
