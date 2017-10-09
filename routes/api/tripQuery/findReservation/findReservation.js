@@ -36,10 +36,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var testInvAgainstReq_1 = require("../../../../functions/testInvAgainstReq/testInvAgainstReq");
+// import { testInvAgainstReq } from "../../../../functions/testInvAgainstReq/testInvAgainstReq";
 var buildReservRequest_1 = require("./buildReservRequest/buildReservRequest");
 var findAllReservationsAtStation_1 = require("./findAllReservationsAtStation");
 var createTempReservation_1 = require("./createTempReservation");
+var testInvAgainstReq_1 = require("../testInvAgainstReq/testInvAgainstReq");
+// import { ReservRequest } from "../../../../functions/testInvAgainstReq/shared/reservRequest";
 exports.findReservation = function (stationNumber, processManager) { return __awaiter(_this, void 0, void 0, function () {
     var stationDistanceData, checking, reservSuccess, stationSuccess, currentStation, reservations, request, result;
     return __generator(this, function (_a) {

@@ -1,5 +1,5 @@
 import { ReservEvent } from "./shared/reservEvent";
-import { StationData } from "../stationData/StationData";
+
 import { ReservRequest } from "./shared/reservRequest";
 import { State } from "./shared/state";
 import { TestStatus } from "./shared/teststatus";
@@ -7,6 +7,7 @@ import { TestStatus } from "./shared/teststatus";
 import { isAllowed } from './isAllowed';
 import { processOrDefer } from "./processOrDefer";
 import { buildTestState } from "./buildTestState";
+import { StationData } from "../../stationData/stationData";
 
 export const testInvAgainstReq = (data: ReservEvent[], station: StationData, request: ReservRequest): Boolean => {
     let state: State = buildTestState(data, station, request);

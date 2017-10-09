@@ -1,7 +1,7 @@
 import { State } from './shared/state';
 import { ReservRequest } from './shared/reservRequest';
-import { EventType } from '../../shared/eventType';
-import { StationData } from "../stationData/StationData";
+import { StationData } from "../../stationData/stationData";
+import { EventType } from "../../../../shared/eventType";
 
 export const isAllowed = (state: State, station: StationData, request: ReservRequest): State => {
     if ((state.currentInv === 0) && (request.type === EventType.pickup)) {

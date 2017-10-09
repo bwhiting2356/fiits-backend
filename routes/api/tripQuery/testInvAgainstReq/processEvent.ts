@@ -1,4 +1,6 @@
-import { EventType } from "../../shared/eventType"
+// import { EventType } from "../../shared/eventType"
+
+import { EventType } from "../../../../shared/eventType";
 
 export const processEvent = (currentInv: number, eventType: String ): number => {
     if (eventType === EventType.pickup) {

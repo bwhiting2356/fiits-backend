@@ -3,8 +3,8 @@ import { mapToDataValues } from "../stationData/mapToDataValues";
 import { TravelMode } from "../../../shared/travelMode";
 import { buildDistanceMatrixRequest } from "../distanceMatrix/buildDistanceMatrixRequest";
 import { fetchDistanceMatrix } from "../distanceMatrix/fetchDistanceMatrix";
-import {DistanceMatrixRequest} from "../distanceMatrix/distanceMatrixRequest";
-import {mergeResultsWithIds} from "./mergeResultsWithIds";
+import { DistanceMatrixRequest } from "../distanceMatrix/distanceMatrixRequest";
+import { mergeResultsWithIds } from "./mergeResultsWithIds";
 
 export const cacheCoords = async (req) => {
     const exists = await DistanceMatrixCache.findOne({ where: { query: req.body } });
@@ -28,7 +28,5 @@ export const cacheCoords = async (req) => {
         DistanceMatrixCache.create({query: req.body, result: mergedResults })
     }
 };
-
-export const
 
 
