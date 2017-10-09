@@ -2,125 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a426350-74af-4c0f-a24e-7cb8dfda3a4f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixBicyclingReq.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixRequest.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/buildDistanceMatrixWalkingReq.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/fetchDirections.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/fetchDirections.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/fetchDirections.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/fetchDistanceMatrix.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/fetchDistanceMatrix.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/fetchDistanceMatrix.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/findFirstReservation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/findFirstReservation.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/findFirstReservation.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/findSecondReservation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/findSecondReservation.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/findSecondReservation.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getDataValuesFromStations.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getDataValuesFromStations.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getDataValuesFromStations.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getPointsFromDirections.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getPointsFromDirections.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getPointsFromDirections.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getStationDataFromDB.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getStationDataFromDB.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/getStationDataFromDB.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mapDistanceResultsToStations.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mapDistanceResultsToStations.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mapDistanceResultsToStations.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mapStationDataToCoords.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mapStationDataToCoords.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mapStationDataToCoords.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mergeDistanceMatrixWithStations.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mergeDistanceMatrixWithStations.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/mergeDistanceMatrixWithStations.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/reservationResponse.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/reservationResponse.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/reservationResponse.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/StationData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/StationData.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/StationData.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareBicyclingDistance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareBicyclingDistance.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareBicyclingDistance.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareWalking1Distance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareWalking1Distance.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareWalking1Distance.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareWalking2Distance.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareWalking2Distance.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/compareWalking2Distance.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/stationDataManager.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/stationDataManager.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/stationDataManager.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/stationDistanceData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/stationDistanceData.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/stationData/stationDistanceData.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functions/tripQueryRequest.ts" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/buildTestState.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/buildTestState.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/buildTestState.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/buildTestState.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/buildTestState.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/buildTestState.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/deferEvent.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/deferEvent.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/deferEvent.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/deferEvent.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/deferEvent.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/deferEvent.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/isAllowed.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/isAllowed.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/isAllowed.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/isAllowed.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/isAllowed.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/isAllowed.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processDeferredEvent.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processDeferredEvent.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processDeferredEvent.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processDeferredEvent.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processDeferredEvent.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processDeferredEvent.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processEvent.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processEvent.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processEvent.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processEvent.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processEvent.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processEvent.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processOrDefer.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processOrDefer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processOrDefer.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processOrDefer.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processOrDefer.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processOrDefer.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processOriginalEvent.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processOriginalEvent.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processOriginalEvent.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processOriginalEvent.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/processOriginalEvent.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/processOriginalEvent.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixRequest.model.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/distanceMatrixRequest.model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixRequest.model.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/distanceMatrixRequest.model.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixRequest.model.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/distanceMatrixRequest.model.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixResultRow.model.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/distanceMatrixResultRow.model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixResultRow.model.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/distanceMatrixResultRow.model.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/distanceMatrixResultRow.model.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/distanceMatrixResultRow.model.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservEvent.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/reservEvent.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservEvent.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/reservEvent.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservEvent.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/reservEvent.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservRequest.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/reservRequest.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservRequest.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/reservRequest.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/reservRequest.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/reservRequest.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/state.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/state.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/state.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/state.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/state.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/state.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/stationCoordsData.model.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/stationCoordsData.model.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/stationCoordsData.model.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/stationCoordsData.model.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/stationCoordsData.model.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/stationCoordsData.model.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/teststatus.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/teststatus.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/teststatus.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/teststatus.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/teststatus.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/teststatus.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/timeTarget.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/timeTarget.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/timeTarget.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/timeTarget.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/shared/timeTarget.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/shared/timeTarget.ts" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/testInvAgainstReq.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/testInvAgainstReq.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/testInvAgainstReq.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/testInvAgainstReq.js.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/functions/testInvAgainstReq/testInvAgainstReq.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/testInvAgainstReq/testInvAgainstReq.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite" afterPath="$PROJECT_DIR$/db.sqlite" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/cacheCoords/cacheCoords.js.map" afterPath="$PROJECT_DIR$/routes/api/cacheCoords/cacheCoords.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/cacheCoords/cacheCoords.ts" afterPath="$PROJECT_DIR$/routes/api/cacheCoords/cacheCoords.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/stationData/stationToCoords.ts" afterPath="$PROJECT_DIR$/routes/api/stationData/stationToCoords.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.js" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.js.map" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.ts" afterPath="$PROJECT_DIR$/routes/api/tripQuery/findReservation/findReservation.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -379,6 +261,11 @@
               <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
               <item name="mock-data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fiits-backend-v3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fiits-backend-v3" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -444,12 +331,12 @@
       <workItem from="1506059857216" duration="2608000" />
       <workItem from="1506111013299" duration="40249000" />
       <workItem from="1506820544607" duration="12289000" />
-      <workItem from="1507071566506" duration="10367000" />
+      <workItem from="1507071566506" duration="10846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198661000" />
+    <option name="totallyTimeSpent" value="199140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,10 +349,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="13" y="23" width="1217" height="777" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5033445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
